@@ -13,7 +13,7 @@ Before installing the Zonemaster GUI, ensure you have the Zonemaster Engine and 
 There are two ways to install the Zonemaster GUI:
 
 ### Quick Install (1 minute)
-Download the release zip file, upload to your web server, and configure. 
+Download the release zip file, upload to your web server, and configure.
 
 ### Full Customization (5 minutes)
 Clone the repository, build, and deploy.
