@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+.result {
+	.nav-pills {
+		list-style: none;
+		padding: 0;
+		margin: 0 !important;
+		padding-bottom: rhythm(1) !important;
+		justify-content: flex-start !important;
+
+		@include bp-up(md) {
+			margin-right: rhythm(1) !important;
+		}
+
+		.nav-item {
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-bottom: rhythm(0.5);
+
+		}
+
+		.btn {
+			background-color: $color-concrete;
+			color: $color-cyberspace;
+			box-shadow: 0 0 0 1px inset $color-concrete;
+			display: inline-flex;
+			padding-left: rhythm(2);
+			padding-right: rhythm(2);
+			padding-top: rhythm(1);
+			padding-bottom: rhythm(1);
+			font-size: $size-medium;
+
+			.rounded-pill {
+				background-color: $color-granit;
+				border-radius: 50%;
+				width: 27px;
+				height: 27px;
+				flex-grow: 0;
+				flex-shrink: 0;
+				text-align: center;
+				line-height: 27px;
+				color: $color-snow;
+			}
+
+			&.all {
+
+			}
+
+			&.all.active {
+				background-color: $color-ocean-dark;
+				box-shadow: 0 0 0 1px inset $color-ocean-dark;
+				color: $color-snow;
+
+				.rounded-pill {
+					background-color: $color-ocean;
+					color: $color-cyberspace;
+				}
+			}
+
+			&.info.active {
+				background-color: $color-jade;
+				box-shadow: 0 0 0 1px inset $color-jade;
+				color: $color-cyberspace;
+
+				.rounded-pill {
+					background-color: $color-jade-dark;
+				}
+			}
+
+
+			&.notice.active {
+				background-color: $color-ocean;
+				box-shadow: 0 0 0 1px inset $color-ocean;
+				color: $color-cyberspace;
+
+				.rounded-pill {
+					background-color: $color-ocean-dark;
+				}
+			}
+
+			&.warning.active {
+				background-color: $color-sandstone;
+				box-shadow: 0 0 0 1px inset $color-sandstone;
+
+				.rounded-pill {
+					background-color: $color-sandstone-dark;
+				}
+			}
+
+			&.error.active {
+				background-color: $color-ruby;
+				box-shadow: 0 0 0 1px inset $color-ruby;
+
+				.rounded-pill {
+					background-color: $color-ruby-dark;
+				}
+			}
+
+			&.critical.active {
+				background-color: $color-ruby-dark;
+				box-shadow: 0 0 0 1px inset $color-ruby-dark;
+
+				.rounded-pill {
+					background-color: $color-ruby;
+				}
+			}
+		}
+	}
+}

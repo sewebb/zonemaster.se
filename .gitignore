@@ -1,0 +1,28 @@
+# This project
+www/app/db.php
+mix-manifest.json
+data
+
+# Common
+*.log
+.env
+!provision/.env
+
+# IDE
+.idea
+
+# Composer
+vendor
+
+# Node
+node_modules
+
+# Docker
+.data
+docker/nginx/default.conf
+.DS_Store
+/tempdata
+/iis_web.pem
+/iis_web.key
+cghooks.lock
+

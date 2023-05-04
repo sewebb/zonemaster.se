@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+// Hide stuff
+.github-corner,
+.d-none,
+.fa-github,
+.fa-github + a {
+	display: none !important;
+}
+
+a:empty,
+.sr-only {
+	@include visuallyhidden;
+}
