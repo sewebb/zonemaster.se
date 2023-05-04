@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.list-group {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 rhythm(2) 0;
+
+	li {
+		padding: rhythm(1) rhythm(2);
+
+		&:nth-child(odd) {
+			background-color: $color-ash;
+		}
+
+		a {
+			color: $color-cyberspace;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+}

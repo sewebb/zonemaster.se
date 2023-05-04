@@ -1,0 +1,77 @@
+@mixin list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	@include list-unstyled();
+	width: 100%;
+}
+
+.page-link {
+	position: relative;
+	display: block;
+	padding: rhythm(1) rhythm(2);
+	line-height: 1;
+	border: 1px solid $color-ash;
+	color: $color-cyberspace;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+		background-color: $color-ash;
+	}
+
+	&:focus {
+		z-index: 2;
+		outline: 0;
+	}
+
+	// Opinionated: add "hand" cursor to non-disabled .page-link elements
+	&:not(:disabled):not(.disabled) {
+		cursor: pointer;
+	}
+}
+
+.page-item {
+	&:first-child {
+		.page-link {
+			margin-left: 0;
+			border-top-left-radius: $border-radius;
+			border-bottom-left-radius: $border-radius;
+		}
+	}
+
+	&:last-child {
+		.page-link {
+			border-top-right-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+	}
+
+	&.active .page-link {
+		z-index: 1;
+		font-family: $font-family-headings;
+		background-color: $color-ash;
+	}
+
+	&.disabled .page-link {
+		pointer-events: none;
+		// Opinionated: remove the "hand" cursor set previously for .page-link
+		cursor: auto;
+		opacity: 0.5;
+		color: rgba($color-cyberspace, 50%);
+	}
+
+	.visually-hidden {
+		@extend %u-visuallyhidden;
+	}
+
+	& + .page-item {
+		.page-link {
+			border-left: 0;
+		}
+	}
+}
