@@ -1,0 +1,44 @@
+@import '~@internetstiftelsen/styleguide/src/globals';
+
+$namespace: '';
+
+@import '~@internetstiftelsen/styleguide/src/configurations/grid/grid';
+@import '~@internetstiftelsen/styleguide/src/configurations/extends';
+@import '~@internetstiftelsen/styleguide/src/configurations/typography/typography';
+
+@import '~@internetstiftelsen/styleguide/src/atoms/input/input';
+@import '~@internetstiftelsen/styleguide/src/atoms/button/button';
+
+@import '~@internetstiftelsen/styleguide/src/organisms/footer/footer';
+
+// Utitilities
+@import 'mixins';
+@import '../js/tab-highlighting/tab-highlighting';
+
+// Grid
+@import 'grid';
+
+// Theme
+@import 'theme';
+
+// Hide
+@import 'hide';
+
+// Layout
+@import 'header';
+@import 'main';
+
+// Components
+@import 'form';
+@import 'alert';
+@import 'select';
+@import 'footer';
+@import 'tooltip';
+@import 'progressbar';
+@import 'button';
+@import 'checkbox';
+@import 'nav-pills';
+@import 'result';
+@import 'modal';
+@import 'pagination';
+@import 'list-group';
