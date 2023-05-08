@@ -35,8 +35,12 @@ footer .col-md-4 {
 }
 
 footer .col-md-5,
-footer li.col-md-auto {
+footer li.col-md-auto:nth-child(2) {
 	display: none;
+}
+
+footer li.col-md-auto a {
+	font-size: $size-medium;
 }
 
 .o-footer__bottom-links {
