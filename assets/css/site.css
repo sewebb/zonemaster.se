@@ -5969,7 +5969,8 @@ h1,
 
 h2,
 .beta,
-.modal .modal-title {
+.modal .modal-title,
+.container h4 {
   margin-top: -0.5rem;
   margin-bottom: 0.5rem;
   padding-top: 0.365rem;
@@ -5981,7 +5982,8 @@ h2,
 @media (min-width: 576px) {
   h2,
   .beta,
-  .modal .modal-title {
+  .modal .modal-title,
+  .container h4 {
     margin-top: -0.5rem;
     margin-bottom: 0.5rem;
     padding-top: 0.295rem;
