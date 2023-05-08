@@ -7899,13 +7899,13 @@ footer li.col-md-auto {
 }
 
 footer .col-md-12 img {
-  width: 170px;
+  width: 120px;
   height: auto;
   margin-top: 1rem;
 }
 @media (min-width: 769px) {
   footer .col-md-12 img {
-    width: 250px;
+    width: 180px;
     margin-top: 1.5rem;
   }
 }
