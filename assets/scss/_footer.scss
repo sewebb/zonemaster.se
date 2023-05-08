@@ -34,6 +34,15 @@ footer .col-md-4 {
 	}
 }
 
+footer li {
+	margin-right: rhythm(1);
+}
+
+footer li.col-md span {
+	@extend %link-styles;
+	font-size: $size-medium;
+}
+
 footer .col-md-5,
 footer li.col-md-auto:nth-child(2) {
 	display: none;

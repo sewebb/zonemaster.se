@@ -5853,7 +5853,7 @@ a[name],
   background-color: inherit;
 }
 
-footer .col-md-4 > span, footer a, ul:not([class]) li > a,
+footer li.col-md span, footer .col-md-4 > span, footer a, ul:not([class]) li > a,
 ol:not([class]) li > a, p a,
 td a:not([class*=tag]),
 th a:not([class*=tag]) {
@@ -5862,10 +5862,10 @@ th a:not([class*=tag]) {
   color: #000;
   text-decoration: none;
 }
-footer .col-md-4 > span:hover, footer a:hover, ul:not([class]) li > a:hover,
+footer li.col-md span:hover, footer .col-md-4 > span:hover, footer a:hover, ul:not([class]) li > a:hover,
 ol:not([class]) li > a:hover, p a:hover,
 td a:hover:not([class*=tag]),
-th a:hover:not([class*=tag]), footer .col-md-4 > span:focus, footer a:focus, ul:not([class]) li > a:focus,
+th a:hover:not([class*=tag]), footer li.col-md span:focus, footer .col-md-4 > span:focus, footer a:focus, ul:not([class]) li > a:focus,
 ol:not([class]) li > a:focus, p a:focus,
 td a:focus:not([class*=tag]),
 th a:focus:not([class*=tag]) {
@@ -5873,7 +5873,7 @@ th a:focus:not([class*=tag]) {
   border-radius: 0.25rem;
   background-color: #a7d8fd;
 }
-footer .col-md-4 > span[href^=mailto], footer a[href^=mailto], ul:not([class]) li > a[href^=mailto],
+footer li.col-md span[href^=mailto], footer .col-md-4 > span[href^=mailto], footer a[href^=mailto], ul:not([class]) li > a[href^=mailto],
 ol:not([class]) li > a[href^=mailto], p a[href^=mailto],
 td a[href^=mailto]:not([class*=tag]),
 th a[href^=mailto]:not([class*=tag]) {
@@ -7872,6 +7872,14 @@ footer.bg-light .container .row {
 footer .col-md-4 {
   padding-bottom: 0.5rem;
 }
+footer li {
+  margin-right: 0.5rem;
+}
+
+footer li.col-md span {
+  font-size: 14px;
+}
+
 footer .col-md-5,
 footer li.col-md-auto:nth-child(2) {
   display: none;
