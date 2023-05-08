@@ -38,6 +38,10 @@ footer li {
 	margin-right: rhythm(1);
 }
 
+footer li i[aria-hidden='true'] {
+	display: none;
+}
+
 footer li.col-md span {
 	@extend %link-styles;
 	font-size: $size-medium;
