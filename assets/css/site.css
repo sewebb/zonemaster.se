@@ -8653,4 +8653,8 @@ body.modal-open {
   text-decoration: underline;
 }
 
+app-faq .main {
+  padding-top: 2rem;
+}
+
 /*# sourceMappingURL=site.css.map*/
