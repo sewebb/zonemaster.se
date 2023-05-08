@@ -34,10 +34,40 @@ footer .col-md-4 {
 	}
 }
 
-footer .col-md-5 {
+footer .col-md-5,
+footer li.col-md-auto {
 	display: none;
 }
 
 .o-footer__bottom-links {
 	display: none;
+}
+
+footer .container {
+	@include bp-up(md) {
+		justify-content: space-between;
+		align-items: center;
+		display: flex;
+	}
+}
+
+footer .col-md-12 {
+	@include bp-up(md) {
+		width: 50%;
+
+		& + .col-md-12 {
+			text-align: right;
+		}
+	}
+}
+
+footer .col-md-12 img {
+	width: 170px;
+	height: auto;
+	margin-top: rhythm(2);
+
+	@include bp-up(md) {
+		width: 250px;
+		margin-top: rhythm(3);
+	}
 }
