@@ -3544,7 +3544,6 @@ console.log('🎉 Zonemaster is up and running');
 /***/ (() => {
 
 // Add class to html-element on tab click
-console.log('foo');
 var element = document.getElementsByTagName('html')[0];
 var highLightClass = 'tab-highlight';
 function onKeyDown(e) {

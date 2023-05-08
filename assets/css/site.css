@@ -7872,12 +7872,42 @@ footer.bg-light .container .row {
 footer .col-md-4 {
   padding-bottom: 0.5rem;
 }
-footer .col-md-5 {
+footer .col-md-5,
+footer li.col-md-auto {
   display: none;
 }
 
 .o-footer__bottom-links {
   display: none;
+}
+
+@media (min-width: 769px) {
+  footer .container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  footer .col-md-12 {
+    width: 50%;
+  }
+  footer .col-md-12 + .col-md-12 {
+    text-align: right;
+  }
+}
+
+footer .col-md-12 img {
+  width: 170px;
+  height: auto;
+  margin-top: 1rem;
+}
+@media (min-width: 769px) {
+  footer .col-md-12 img {
+    width: 250px;
+    margin-top: 1.5rem;
+  }
 }
 
 .tooltip {

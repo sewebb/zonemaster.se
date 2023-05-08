@@ -11,7 +11,7 @@ root "/home/vagrant/www/zonemaster.se";
     index index.html index.htm index.php;
 
     charset utf-8;
-    rewrite ^/(.+)(/assets/.+)$ $0 redirect;
+    rewrite ^/(.+)(/assets/.+)$ $2 redirect;
 
     location = / {
         return 302 /sv/;
@@ -26,7 +26,7 @@ root "/home/vagrant/www/zonemaster.se";
     }
 
     location /api {
-        proxy_pass http://79.136.37.214:5000;
+        proxy_pass https://zmbackend03-dev.iis.se:8443;
 
     }
 

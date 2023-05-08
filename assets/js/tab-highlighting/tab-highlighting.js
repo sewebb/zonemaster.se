@@ -1,5 +1,4 @@
 // Add class to html-element on tab click
-console.log('foo');
 const element = document.getElementsByTagName('html')[0];
 const highLightClass = 'tab-highlight';
 
