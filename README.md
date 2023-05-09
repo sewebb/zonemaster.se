@@ -1,6 +1,10 @@
 # zonemaster.se
 
 ## nginx configuration
+
+A reverse proxy must be set up to one of the available environments.
+{dev}, {stg}, {prd} e.g https://zmbackend03-dev.iis.se:8443
+
 ```
 server {
 listen 80;
