@@ -68,17 +68,17 @@ footer .container {
 	}
 }
 
-footer .col-md-12 {
+footer .col-12 {
 	@include bp-up(md) {
 		width: 50%;
 
-		& + .col-md-12 {
+		& + .col-12 {
 			text-align: right;
 		}
 	}
 }
 
-footer .col-md-12 img {
+footer .footer-logotype {
 	width: 120px;
 	height: auto;
 	margin-top: rhythm(2);
