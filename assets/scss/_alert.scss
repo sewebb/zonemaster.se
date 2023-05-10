@@ -70,6 +70,7 @@ $alert-text: $color-cyberspace;
 		@include alert-variant($alert-warning-border, $alert-warning-bg, $alert-text);
 	}
 
+	&.alert-danger,
 	&.alert-error {
 		@include alert-variant($alert-error-border, $alert-error-bg, $alert-text);
 
