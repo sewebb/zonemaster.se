@@ -1,0 +1,32 @@
+/* @preserve
+    _____ __ _     __                _
+   / ___// /(_)___/ /___  ____      (_)___
+  / (_ // // // _  // -_)/ __/_    / /(_-<
+  \___//_//_/ \_,_/ \__//_/  (_)__/ //___/
+                              |___/
+
+  Version: 1.7.4
+  Author: Nick Piscitelli (pickykneee)
+  Website: https://nickpiscitelli.com
+  Documentation: http://nickpiscitelli.github.io/Glider.js
+  License: MIT License
+  Release Date: October 25th, 2018
+
+*/
+
+/*!
+* focus-trap 6.9.4
+* @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
+*/
+
+/*!
+* tabbable 5.3.3
+* @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
+*/
+
+/**
+ * van11y-accessible-accordion-aria - ES2015 accessible accordion system, using ARIA (compatible IE9+ when transpiled)
+ * @version v3.0.1
+ * @link https://van11y.net/accessible-accordion/
+ * @license MIT : https://github.com/nico3333fr/van11y-accessible-accordion-aria/blob/master/LICENSE
+ */

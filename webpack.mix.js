@@ -16,8 +16,8 @@ mix.options({
 mix.webpackConfig(config);
 
 mix
-	.js('./assets/js/site.js', 'assets/js/site-all.js')
-	.sass('./assets/scss/site.scss', 'assets/css/site.css')
+	.js('./assets/js/site.js', 'public/assets/js/site-all.js')
+	.sass('./assets/scss/site.scss', 'public/assets/css/site.css')
 	.options({
 		processCssUrls: false,
 	})
