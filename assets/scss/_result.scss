@@ -244,6 +244,14 @@
 		div {
 			display: flex;
 		}
+
+		.btn {
+			margin-bottom: rhythm(0.5);
+
+			@include bp-up(md) {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	.dropdown-toggle.export,
