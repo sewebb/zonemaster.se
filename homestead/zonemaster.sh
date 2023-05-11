@@ -41,7 +41,7 @@ block="server {
     listen 80;
     listen 443 ssl http2;
     server_name .zonemaster.test;
-    root "/home/vagrant/www/zonemaster.se";
+    root "/home/vagrant/www/zonemaster.se/public";
 
     index index.html index.htm index.php;
 
