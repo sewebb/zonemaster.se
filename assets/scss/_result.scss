@@ -45,6 +45,12 @@
 			font-size: $size-base;
 		}
 
+		h4 {
+			button {
+				display: flex;
+			}
+		}
+
 		.rounded-pill {
 			background-color: $color-granit;
 			border-radius: 50%;
@@ -161,7 +167,7 @@
 			margin-bottom: rhythm(1);
 
 			div,
-			h4{
+			h4 {
 				margin-top: 0;
 				margin-bottom: 0;
 				padding-top: 0;
@@ -178,14 +184,14 @@
 					margin-left: -8px;
 					width: 16px;
 					height: 16px;
-					margin-top: 8px;
+					margin-top: 12px;
 					margin-left: rhythm(1);
 					margin-right: rhythm(1);
 				}
 
 				.fa-minus-square-o {
 					transform: rotate(180deg);
-					margin-top: 0;
+					margin-top: 4px;
 				}
 			}
 
