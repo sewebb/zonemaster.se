@@ -55,3 +55,7 @@ node_modules/
 
 *storybook.log
 *.zip
+#Compiles assets
+public/assets/js/*
+public/assets/css/*
+
