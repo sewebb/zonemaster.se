@@ -28,4 +28,4 @@ location /api {
 }
 ```
 
-If you are using Homestead you can add [this file](homestead/zonemaster.sh) to `Homestead/scripts/site-types` and reload the Vagrant box (add `--provision` if simply reloading the box doesn't work).
+If you are using Homestead you can add [this file](homestead/zonemaster.sh) to `Homestead/scripts/site-types` and add `type: "zonemaster"` in Homestead.yaml where you map the Zonemaster site. Reload the Vagrant box (add `--provision` if simply reloading the box doesn't work).
