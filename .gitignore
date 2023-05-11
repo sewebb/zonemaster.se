@@ -26,3 +26,7 @@ docker/nginx/default.conf
 /iis_web.key
 cghooks.lock
 
+#Compiles assets
+public/assets/js/*
+public/assets/css/*
+
