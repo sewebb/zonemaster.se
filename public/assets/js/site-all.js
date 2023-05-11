@@ -6071,8 +6071,8 @@ function _defineProperty(e,t,r){return t in e?Object.defineProperty(e,t,{value:r
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/assets/js/site-all": 0,
-/******/ 			"assets/css/site": 0
+/******/ 			"/public/assets/js/site-all": 0,
+/******/ 			"public/assets/css/site": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -6122,8 +6122,8 @@ function _defineProperty(e,t,r){return t in e?Object.defineProperty(e,t,{value:r
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["assets/css/site"], () => (__webpack_require__("./assets/js/site.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/site"], () => (__webpack_require__("./assets/scss/site.scss")))
+/******/ 	__webpack_require__.O(undefined, ["public/assets/css/site"], () => (__webpack_require__("./assets/js/site.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/assets/css/site"], () => (__webpack_require__("./assets/scss/site.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

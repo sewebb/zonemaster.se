@@ -3,3 +3,7 @@
 app-faq .main {
 	padding-top: rhythm(4)
 }
+
+.faq span[id^=q] {
+	top: -#{rhythm(2)} !important;
+}

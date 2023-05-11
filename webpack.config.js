@@ -9,17 +9,8 @@ module.exports = {
 			files: 'assets/**/*.scss',
 		}),
 		new ESLintPlugin({
-			extensions: ['js', 'jsx'],
+			extensions: ['js'],
 		}),
 		new Dotenv(),
-	],
-	resolve: {
-		modules: [
-			path.resolve(__dirname, 'node_modules'),
-		],
-		alias: {
-			local: path.resolve(__dirname, 'assets/js'),
-		},
-	},
-	output: { chunkFilename: 'assets/js/chunks/[name].chunk.js?id=[chunkhash]', publicPath: '/app/themes/goto10/' },
+	]
 };

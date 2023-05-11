@@ -8659,4 +8659,8 @@ app-faq .main {
   padding-top: 2rem;
 }
 
+.faq span[id^=q] {
+  top: -1rem !important;
+}
+
 /*# sourceMappingURL=site.css.map*/
