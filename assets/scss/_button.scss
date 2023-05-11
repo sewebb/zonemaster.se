@@ -152,6 +152,8 @@
 .btn-group {
 	margin-bottom: rhythm(2);
 	.btn {
+		margin-bottom: rhythm(0.5);
+
 		& + .btn {
 			margin-left: rhythm(0.5);
 		}
