@@ -79,12 +79,13 @@ footer .col-12 {
 }
 
 footer .footer-logotype {
-	width: 120px;
+	width: 180px;
 	height: auto;
+	max-width: none;
 	margin-top: rhythm(2);
 
 	@include bp-up(md) {
-		width: 180px;
+		width: 220px;
 		margin-top: rhythm(3);
 	}
 }

@@ -6,6 +6,6 @@
     "logoUrl": "assets/images/internetstiftelsen-logo.svg",
     "msgBanner": "",
     "pollingInterval": 5000,
-    "footerLogo": "assets/images/afnic-logo.svg",
-    "footerLogoAlt": "Afnic logotype"
+    "footerLogo": "assets/images/internetstiftelsen-afnic-logo.svg",
+    "footerLogoAlt": "Internetstiftelsen & Afnic logotypes"
 }
