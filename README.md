@@ -1,6 +1,6 @@
 # zonemaster.se
 
-This project is built on the Zonemaster GUI repo. https://github.com/zonemaster/zonemaster-gui and is basically a skinned barebone version of that repo.
+This project is built on the Zonemaster GUI repo https://github.com/zonemaster/zonemaster-gui and is basically a skinned barebone version of that repo.
 
 ## Installation
 Clone the repo and run `npm install`. To compile CSS and JS-files, run `npm run production`. There is also a watch task `npm start` if you need to monitor file changes.
