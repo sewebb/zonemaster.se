@@ -9,6 +9,9 @@ Clone the repo and run `npm install`. To compile CSS and JS-files, run `npm run 
 * Stage: Commit and push to `develop` to deploy https://stage.zonemaster.se. Deployment is done automatically through Envoyer.
 * Production: Merge `develop` to `main` and push. Log in to Envoyer and manually deploy the `main` branch.
 
+## UI configuration
+Basic configuration such as logotypes, languages etc. is done in the `app.config.json` file located in the `public/assets` folder.
+
 ## Nginx configuration
 
 A reverse proxy must be set up to one of the available environments.
