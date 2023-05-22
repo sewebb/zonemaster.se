@@ -7,7 +7,7 @@ Clone the repo and run `npm install`. To compile CSS and JS-files, run `npm run 
 
 ## Deployment
 * Stage: Commit and push to `develop` to deploy https://stage.zonemaster.se. Deployment is done automatically through Envoyer.
-* Production: Merge develop to master and push. Log in to Envoyer and manually deploy the master branch.
+* Production: Merge `develop` to `main` and push. Log in to Envoyer and manually deploy the `main` branch.
 
 ## Nginx configuration
 
