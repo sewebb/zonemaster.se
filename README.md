@@ -6,8 +6,8 @@ This project is built on the Zonemaster GUI repo. https://github.com/zonemaster/
 Clone the repo and run `npm install`. To compile CSS and JS-files, run `npm run production`. There is also a watch task `npm start` if you need to monitor file changes.
 
 ## Deployment
-Stage: Commit and push to `develop` to deploy https://stagezonemaster.se. Deployment is done through Envoyer.
-Production: Merge develop to master and push. Log in to Envoyer and manually deploy the master branch.
+* Stage: Commit and push to `develop` to deploy https://stage.zonemaster.se. Deployment is done automatically through Envoyer.
+* Production: Merge develop to master and push. Log in to Envoyer and manually deploy the master branch.
 
 ## Nginx configuration
 
