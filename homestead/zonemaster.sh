@@ -60,6 +60,26 @@ block="server {
         try_files \$uri \$uri/ /sv/index.html?\$query_string;
     }
 
+    location /es {
+        try_files \$uri \$uri/ /es/index.html?\$query_string;
+    }
+
+     location /fi {
+        try_files \$uri \$uri/ /fi/index.html?\$query_string;
+    }
+
+	location /fr {
+		try_files \$uri \$uri/ /fr/index.html?\$query_string;
+	}
+
+	 location /nb {
+		try_files \$uri \$uri/ /nb/index.html?\$query_string;
+    }
+
+	 location /da {
+		try_files \$uri \$uri/ /da/index.html?\$query_string;
+    }
+
     location /api {
         proxy_pass https://zmbackend03-dev.iis.se:8443;
 

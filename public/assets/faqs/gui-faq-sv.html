@@ -31,7 +31,7 @@ hjälp av ett JSON-RPC-API och en databas.</li>
 <p>När Zonemaster startar en test av ett domännamn, som "zonemaster.net" (genom
 "CLI" eller "GUI") så kommer det att kontrollera domännamnets allmänna tillstånd
 med hjälp av en serie av test. Testen som utförs av Zonemaster finns listade i
-dokumentet "<a href="https://github.com/zonemaster/zonemaster/tree/master/docs/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a>" (<em>Definierade testfall</em>).</p>
+dokumentet "<a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a>" (<em>Definierade testfall</em>).</p>
 <h4><span id="q2"></span>2. Vem står bakom Zonemaster?</h4>
 <p>Zonemaster är ett samarbetsprojekt mellan <a href="https://internetstiftelsen.se/">Internetstiftelsen</a>
 (registry för .se och .nu) och <a href="https://www.afnic.fr/en/">AFNIC</a>
@@ -48,7 +48,7 @@ ifall det finns fel eller varningar när deras domännamn testats.</p>
 <h4><span id="q4"></span>4. Zonemaster visar "Fel" eller "Varning" när jag testar min domän, vad betyder det?</h4>
 <p>Det beror på vilken test det gäller. Varje testfall kommer med ett eller flera
 meddelanden som beskriver det problem som har funnits. Mera detaljer om varje
-testfall kan hittas via dokumentet "<a href="https://github.com/zonemaster/zonemaster/tree/master/docs/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a>"
+testfall kan hittas via dokumentet "<a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a>"
 (<em>Definierade testfall</em>).</p>
 <h4><span id="q5"></span>5. Hur kan Zonemaster bedömma vad som är rätt och fel?</h4>
 <p>Zonemasters bedömning är i första hand baserat på DNS-standarden som den är
@@ -56,10 +56,10 @@ definierad i <a href="https://www.ietf.org/standards/rfcs/">RFC:er</a> (text på
 <a href="https://en.wikipedia.org/wiki/Request_for_Comments">beskrivning av RFC i engelskspråkiga Wikipedia</a>).
 Zonemaster baserar också sin bedömning på rekommenderade inställningar av DNS,
 vilka är mera löst definierade. Alla zonemastertest är definierade och finns som
-"<a href="https://github.com/zonemaster/zonemaster/tree/master/docs/specifications/tests#list-of-defined-test-cases">Test Case Specifications</a>" (<em>testfallsspecifikationer</em>) i
+"<a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Test Case Specifications</a>" (<em>testfallsspecifikationer</em>) i
 vilka det återfinns referenser till dokument med relevant del av DNS-standarden.
 En beskrivning av felnivåerna som används, som <em>notice</em> ("notering"), <em>warning</em>
-("varning") och <em>error</em> ("fel") finns i dokumentet "<a href="https://github.com/zonemaster/zonemaster/blob/master/docs/specifications/tests/SeverityLevelDefinitions.md">Severity Level Definitions</a>"
+("varning") och <em>error</em> ("fel") finns i dokumentet "<a href="https://github.com/zonemaster/zonemaster/blob/master/docs/public/specifications/tests/SeverityLevelDefinitions.md">Severity Level Definitions</a>"
 (<em>Defintion av felnivåer</em>).</p>
 <p>Ibland finns det olika tolkningar av standarden eller synpunkter på vad som är
 den rekommenderade inställningen. Zonemastergruppen välkomnar alltid synpunkter
@@ -79,7 +79,7 @@ och IPv6 om inte Zonemaster har konfigurerats på annat sätt. Under knappen
 domänen, vilket innebär att man kan gå tillbaka till ett tidigare test och
 jämföra med ett test som just har körts.</p>
 <p>För det andra så är alla test som Zonemaster kör specificerade i
-"<a href="https://github.com/zonemaster/zonemaster/tree/master/docs/specifications/tests#list-of-defined-test-cases">Test Case Specifications</a>" (<em>testfallsspecifikationer</em>).</p>
+"<a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Test Case Specifications</a>" (<em>testfallsspecifikationer</em>).</p>
 <p>För det tredje så kan Zonemaster också testa icke-publicerade eller odelegerade
 domäner (se <a href="./faq#q12">fråga 12</a>).</p>
 <p>För det fjärde så kan Zonemaster användas för att testa DS-posterna innan de
@@ -118,7 +118,7 @@ man göra en lokal installation av både Zonemaster-Engine och Zonemaster-CLI,
 alternativt installera den Docker-image som också finns tillgänglig. DNS-frågorna
 kan visas genom att välja DEBUG-nivån "--level DEBUG". Det ska poängteras att det
 blir mycket som visas från CLI-gränssnittet i det fallet. För mera information se
-"<a href="https://github.com/zonemaster/zonemaster-cli/blob/master/USING.md">Using The CLI</a>" (<em>användardokumentet för CLI</em>).</p>
+"<a href="https://github.com/zonemaster/zonemaster/blob/master/docs/public/using/cli.md">Using The CLI</a>" (<em>användardokumentet för CLI</em>).</p>
 <h4><span id="q12"></span>12. Vad är ett odelegerat domäntest?</h4>
 <p>Ett odelegerat domäntest är ett test som genomförs på en domän som inte
 nödvändigtvis är publicerad i DNS. Detta kan vara mycket användbart om man tänker

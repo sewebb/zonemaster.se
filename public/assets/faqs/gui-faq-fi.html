@@ -1,0 +1,85 @@
+<h1>Zonemaster</h1>
+<ol>
+<li><a href="./faq#q1">Mikä Zonemaster on?</a></li>
+<li><a href="./faq#q2">Kuka on Zonemasterin takana?</a></li>
+<li><a href="./faq#q3">Mitä hyötyä Zonemasterista on minulle?</a></li>
+<li><a href="./faq#q4">Zonemaster näyttää virheilmoitusta tai varoitusta, kun testaan verkkotunnustani. Mitä se tarkoittaa?</a></li>
+<li><a href="./faq#q5">Miten Zonemaster selvittää, mikä on oikein ja mikä väärin määritetty?</a></li>
+<li><a href="./faq#q6">Pystyykö Zonemaster käsittelemään IPv6:ta?</a></li>
+<li><a href="./faq#q7">Pystyykö Zonemaster käsittelemään DNSSEC:iä?</a></li>
+<li><a href="./faq#q8">Miten Zonemaster eroaa muista verkkotunnusten toimintaa testaavista ohjelmista?</a></li>
+<li><a href="./faq#q9">Zonemaster ja yksityisyys</a></li>
+<li><a href="./faq#q10">Miksi en voi testata verkkotunnustani?</a></li>
+<li><a href="./faq#q11">Millaisia DNS kyselyitä Zonemaster generoi?</a></li>
+<li><a href="./faq#q12">Mikä on delegoimattoman verkkotunnuksen testi?</a></li>
+<li><a href="./faq#q13">Voinko testata DS-tietueet ennen niiden julkaisua?</a></li>
+<li><a href="./faq#q14">Kuinka voin testata "käänteistä" (reverse) nimipalvelua Zonemasterilla?</a></li>
+</ol>
+<h2>Zonemaster</h2>
+<h4><span id="q1"></span>1. Mikä Zonemaster on?</h4>
+<p>Zonemaster on ohjelma, jonka tarkoitus on auttaa ihmisiä hallitsemaan ja mittaamaan DNS:ää (domain name system) ja toivottavasti myös ymmärtämään paremmin, miten se toimii. Zonemasteriin kuuluu kolme osaa:</p>
+<ol>
+<li>"Engine" – testimoottori, jolla suoritetaan kaikki DNS-testit.</li>
+<li>"CLI" – testimoottorin komentorajapinta.</li>
+<li>"Backend" – palvelu, jonka avulla voit tehdä Zonemaster-testejä ja tallentaa tulokset JSON-RPC API:lla ja tietokannalla.</li>
+<li>GUI - "Backendin" ja testimoottorin verkkorajapinta, graafinen käyttöliittymä.</li>
+</ol>
+<p>Kun verkkotunnus lähetetään Zonemasteriin, ohjelma tutkii verkkotunnuksen kunnon käymällä DNS:n läpi juuresta (.) ylätason verkkotunnukseen (esimerkiksi .NET) ja lopuksi DNS-palvelimiin, joissa on toisen asteen verkkotunnuksia (esimerkiksi zonemaster.net) koskeva informaatio. Zonemaster suorittaa myös muita testejä. Ne on kaikki dokumentoitu täällä: <a href="https://github.com/zonemaster/zonemaster/blob/master/docs/requirements/TestRequirements.md">Test Requirements document</a></p>
+<h4><span id="q2"></span>2. Kuka on Zonemasterin takana?</h4>
+<p>Zonemaster on yhteistyöprojekti, jonka takana ovat <a href="https://internetstiftelsen.se/">Internetstiftelsen</a> (ylätason verkkotunnusten .se ja .nu hallinnoija) ja <a href="https://www.afnic.fr/en/">AFNIC</a> (ylätason verkkotunnuksen .fr sekä muiden ylätason verkkotunnusten kuten .re, .pm, .tf, .wf, .yt ja .paris hallinnoija).</p>
+<h4><span id="q3"></span>3. Mitä hyötyä Zonemasterista on minulle?</h4>
+<p>Zonemaster on kehitetty kahdenlaisia käyttäjiä varten:</p>
+<ul>
+<li>DNS-taitoiset käyttäjät.</li>
+<li>Käyttäjät, joiden tarvitsee vain tietää, onko heidän omistamissaan verkkotunnuksissa ongelmia vai ei.</li>
+</ul>
+<p>Jälkimmäiseen ryhmään kuuluvien käyttäjien tulee kääntyä DNS-operaattorin puoleen, jos testissä jokin tulos ei näytä vihreää valoa.</p>
+<h4><span id="q4"></span>4. Zonemaster näyttää virheilmoitusta tai varoitusta, kun testaan verkkotunnustani. Mitä se tarkoittaa?</h4>
+<p>Riippuu siitä, mikä testi on kyseessä. Jokaiseen testiin liittyy yksi tai useampi viesti, jossa kuvataan löydetyt ongelmat.
+Voit myös saada lisätietoa jokaisesta testistä <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Määritetyt testitapaukset</a>-dokumentista.</p>
+<h4><span id="q5"></span>5. Miten Zonemaster selvittää, mikä on oikein ja mikä väärin määritetty?</h4>
+<p>Kukaan ei voi antaa lopullista, kaikenkattavaa lausuntoa verkkotunnuksen kunnosta. Tämä on tärkeää pitää mielessä. Me Zonemasterin kehittäjät emme väitä, että Zonemaster on aina oikeassa. Joistakin asioista on olemassa erilaisia mielipiteitä varsinkin eri maissa mutta joskus myös paikallisella tasolla. Yhteistyöprojektissamme olemme pyrkineet yhdessä parhaamme mukaan kehittämään profiilin, jonka avulla erilaisia virheitä voidaan arvioida mahdollisimman tehokkaasti, ennen kuin työkalu esittää ne käyttäjälle.
+Käyttäjänä voit helposti luoda oman profiilin, jonka avulla voit arvioida tiettyjen virheiden vakavuutta. Oman profiilin voi osoittaa suoraan CLI-työkalulla.
+Koska DNS kuitenkin kehittyy koko ajan, tilanteet, jotka ovat normaaleja nyt, saattavat olla tulevaisuudessa vakavia virheitä. Jos uskot löytäneesi jotakin, jonka olemme arvioineet väärin, ota epäröimättä yhteyttä osoitteeseen <a href="mailto:zonemaster-users@lists.iis.se">zonemaster-users@lists.iis.se</a> (moderated mailing list) ja lähetä linkki testiisi ja selitys siitä, miksi tulos ei ole mielestäsi oikein.</p>
+<h4><span id="q6"></span>6. Pystyykö Zonemaster käsittelemään IPv6:ta?</h4>
+<p>Pystyy. Kaikki IPv4:llä tehtävät testit voidaan tehdä myös IPv6:lla, ellei IPv6:tta ole erikseen kytketty pois käytöstä.</p>
+<h4><span id="q7"></span>7. Pystyykö Zonemaster käsittelemään DNSSEC:iä?</h4>
+<p>Pystyy. Jos Zonemasterilla testattavalla verkkotunnuksella on käytössä DNSSEC, se testataan automaattisesti.</p>
+<h4><span id="q8"></span>8. Miten Zonemaster eroaa muista verkkotunnusten toimintaa testaavista ohjelmista?</h4>
+<p>Ensinnäkin Zonemaster tallentaa kaikki testitapahtumat. Niinpä voit palata katsomaan viikko sitten tekemäsi edellisen testin tuloksia ja verrata niitä uusimpiin.</p>
+<p>Kaikki Zonemasterin tekemät testit määritellään testitapausspesifikaatioissa, joihin on linkki asiakirjassa "<a href="https://github.com/zonemaster/zonemaster/blob/master/docs/requirements/TestRequirements.md">Test Requirements document</a>".
+Zonemasterilla voi testata myös julkaisemattomia/delegoimattomia verkkotunnuksia (aiheesta enemmän <a href="./faq#q12">kysymyksessä 12</a>).</p>
+<p>Lisäksi Zonemaster on avoimen lähdekoodin ohjelma, ja sen rakenne on modulaarinen. Voit siis halutessasi ottaa koko koodin tai osia siitä käyttöösi omissa järjestelmissäsi.</p>
+<h4><span id="q9"></span>9. Zonemaster ja yksityisyys</h4>
+<p>Koska Zonemaster on kaikkien käytössä, kuka tahansa voi myös tarkastaa verkkotunnuksesi ja myös nähdä verkkotunnuksesi testihistorian. Testien tekijää ei kuitenkaan ole mahdollista selvittää, sillä ainoa kirjattava tieto on testin ajankohta.
+Tietokantaan ei tallenneta evästeitä tai tietoja käyttäjän IP-osoitteesta.</p>
+<h4><span id="q10"></span>10. Miksi en voi testata verkkotunnustani?</h4>
+<p>On useita mahdollisia syitä siihen ettei verkkotunnusta voi testata:</p>
+<ul>
+<li>Kaikista yleisin syy on se että olet kirjoittanut verkkotunnuksen väärin.</li>
+<li>Verkkotunnustasi ei ole vielä delegoitu, verkkotunnus ei esimerkiksi löydy vielä fi-juuresta.</li>
+<li>Verkkotunnuksesi ei ole tavoitettavissa julkisesta Internetistä.</li>
+<li>Samaa verkkotunnusta ei voi testata useita kertoja yhtä aikaa samasta IP-osoitteesta, joten identtisten testien välillä on oltava vähintään viiden minuutin tauko. Niinpä et voi testata verkkotunnusta useammin kuin viiden minuutin välein. Jos testaat verkkotunnuksen uudelleen ennen kuin viisi minuuttia on kulunut, näytetään viimeisin tallennettu tulos.</li>
+<li>Koska Zonemaster on tarkoitettu testaamaan verkkotunnuksia merkityksessä DNS:n verkkoalue (esim. zonemaster.net) eikä verkkoalueiden isäntänimiä (esim. <a href="https://www.zonemaster.net/">www.zonemaster.net</a>), se antaa virheilmoituksen, jos yrität testata tunnusta, joka ei vastaa DNS:n verkkoaluetta.</li>
+</ul>
+<h4><span id="q11"></span>11. Millaisia DNS-kyselyitä Zonemaster generoi?</h4>
+<p>Zonemaster lähettää useita DNS-kyselyitä verkkotunnuksen nimipalvelimille sekä juurinimipalvelimille.</p>
+<p>Zonemasterin graafinen käyttöliittymä ei näytä lähetettyjä kyselyjä, vain CLI rajapinta voi näyttää lähetetyt kyselyt.
+Jos haluat nähdä tällaisia kyselyitä, sinun on asennettava paikallisesti toimiva minimaalinen Zonemaster-instanssi, jossa on sekä Engine- että CLI-komponentit (saatavilla on myös Docker image).
+Lähetetyt kyselyt voidaan näyttää käyttämällä 'DEBUG'-tason vaihtoehtoa. Varoituksena, tulokset voivat olla aika raskaita.  Lisätietoja on kohdassa [CLI:n käyttäminen].
+Tätä vaihtoehtoa voi suositella vain teknisesti edistyneille käyttäjille.</p>
+<h4><span id="q12"></span>12. Mikä on delegoimattoman verkkotunnuksen testi?</h4>
+<p>Delegoimaton verkkotunnustesti tehdään verkkotunnukselle, jota ei tarvitse välttämättä olla julkaistu DNS:ssä. Se voi olla varsin hyödyllistä, jos aiot siirtää verkkotunnuksesi verkkotunnusvälittäjältä toiselle.
+Jos esimerkiksi verkkotunnus esimerkki.se aiotaan siirtää nimipalvelimelta &#39;ns.nic.se&#39; nimipalvelimelle &#39;ns.iis.se&#39;, voit tehdä verkkotunnukselle (esimerkki.se) delegoimattoman
+verkkotunnustestin sillä nimipalvelimella, johon aiot siirtää sen (ns.iis.se), ennen kuin toteutat siirron. Jos testi näyttää vihreää valoa, voit olla melko varma siitä, että verkkotunnuksesi uudessa
+kodissa on kaikki kunnossa. Verkkotunnuksen määrityksissä voi kuitenkin olla virheitä, joita testi ei löydä.</p>
+<h4><span id="q13"></span>13. Voinko testata DS-tietueet ennen niiden julkaisua?</h4>
+<p>Kyllä voit.
+Käytä "Valinnat" painiketta ja lisää Delegation Signer (DS) tietueet testattaviksi.
+Zonemaster käsittelee lisättyjä DS-tietueita samalla tavoin kuin ne olis jo lisätty verkkotunnuksen nimipalvelimille.</p>
+<h4><span id="q14"></span>14. Kuinka voin testata "käänteistä" (reverse) nimipalvelua Zonemasterilla?</h4>
+<p>Jotta voisit testata käänteisverkkotunnuksen (reverse zone), sinun on tiedettävä, mikä verkkotunnus se on. Jos haluat testata käänteisverkkotunnuksen, syötä se DNS:ssä käytettävässä muodossa, esim.:</p>
+<ul>
+<li>3.2.1.in-addr.arpa</li>
+<li>6.0.1.0.0.2.ip6.arpa</li>
+</ul>
