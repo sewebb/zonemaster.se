@@ -29,7 +29,7 @@ hopefully also understand how the DNS (Domain Name System) works.</p>
 </ol>
 <p>When a domain name (such as 'zonemaster.net') is submitted to Zonemaster (using CLI or
 GUI), it will verify the domain name’s general health with a series of tests.
-The tests conducted by Zonemaster can be found in the <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a> document.</p>
+The tests conducted by Zonemaster can be found in the <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a> document.</p>
 <h4><span id="q2"></span>2. Who is behind Zonemaster?</h4>
 <p>Zonemaster is a joint project between <a href="https://www.afnic.fr/en/">AFNIC</a> (registry of '.fr' TLD and several other
 TLDs, e.g. '.re', '.pm', '.tf', '.wf', '.yt' and '.paris') and <a href="https://internetstiftelsen.se/en/">The Swedish Internet Foundation</a>
@@ -46,14 +46,14 @@ in case there are errors or warnings for any test of their domain name.</p>
 <h4><span id="q4"></span>4. Zonemaster returns "Error" or "Warning" for my domain name. What does it mean?</h4>
 <p>It depends on which test failed for your domain name.
 Each test are accompanied with one or several messages describing the issues found.
-You can also get further insight about each test from the <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a> document.</p>
+You can also get further insight about each test from the <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a> document.</p>
 <h4><span id="q5"></span>5. How can Zonemaster distinguish between what is right and wrong?</h4>
 <p>The judgement of Zonemaster is primarily based on the DNS standards as defined in <a href="https://www.ietf.org/standards/rfcs/">RFCs</a>.
 It also bases its judgement on DNS best practices, which can be more loosely defined.
-All Zonemaster tests are defined in <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/specifications/tests#list-of-defined-test-cases">Test Case Specifications</a>
+All Zonemaster tests are defined in <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Test Case Specifications</a>
 in which the references to the standard documents for that test case are found.</p>
-<p>The descriptions of message levels such as <em>notice</em>, <em>warning</em> and <em>error</em> are found 
-in <a href="https://github.com/zonemaster/zonemaster/blob/master/docs/specifications/tests/SeverityLevelDefinitions.md">Severity Level Definitions</a>.</p>
+<p>The descriptions of message levels such as <em>notice</em>, <em>warning</em> and <em>error</em> are found
+in <a href="https://github.com/zonemaster/zonemaster/blob/master/docs/public/specifications/tests/SeverityLevelDefinitions.md">Severity Level Definitions</a>.</p>
 <p>Sometimes there are different interpretations of the standards or opinions on what is best practice,
 and the Zonemaster team is always open to input.
 If you think we have made a mistake in our judgement please do not hesitate to send us an email
@@ -73,7 +73,7 @@ checked automatically.</p>
 domain name, which means you can go back to a test you did some time ago and compare it
 to the test you ran just a moment ago.</p>
 <p>Secondly, all tests that Zonemaster runs are defined in Test Case specifications that
-can be found in the <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a> document.</p>
+can be found in the <a href="https://github.com/zonemaster/zonemaster/tree/master/docs/public/specifications/tests#list-of-defined-test-cases">Defined Test Cases</a> document.</p>
 <p>Thirdly, Zonemaster can be used to test undelegated domain names.
 See <a href="./faq#q12">Question 12</a>.</p>
 <p>Fourthly, Zonemaster can be used to test DS records before their publication in the parent zone
@@ -108,7 +108,7 @@ If you want to see such queries, you will have to locally install
 a minimally working Zonemaster instance with both the Engine and CLI components (a Docker image is also available).
 Queries sent can be shown using the 'DEBUG' level option.
 Fair warning, the output from the CLI can be quite heavy.
-For more information see <a href="https://github.com/zonemaster/zonemaster-cli/blob/master/USING.md">Using The CLI</a>.</p>
+For more information see <a href="https://github.com/zonemaster/zonemaster/blob/master/docs/public/using/cli.md">Using The CLI</a>.</p>
 <h4><span id="q12"></span>12. What is an undelegated domain test?</h4>
 <p>An undelegated domain test is a test performed on a domain name that may, or may not,
 be fully published in the DNS.

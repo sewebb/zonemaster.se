@@ -2,7 +2,7 @@
     "apiEndpoint": "/api",
     "contactAddress": "info@internetstiftelsen.se",
     "defaultLanguage": "sv",
-    "enabledLanguages": [ "sv", "en" ],
+    "enabledLanguages": [ "sv", "en", "fi", "fr", "es", "nb", "da" ],
     "logoUrl": "assets/images/internetstiftelsen-logo.svg",
     "msgBanner": "",
     "pollingInterval": 5000,
