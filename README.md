@@ -15,7 +15,7 @@ Basic configuration such as logotypes, languages etc. is done in the `app.config
 ## Nginx configuration
 
 A reverse proxy must be set up to one of the available environments.
-`{dev}`, `{stg}`, `{prd}` e.g https://zmbackend03-dev.iis.se:8443
+`{dev}`, `{stg}`, `{prd}` e.g https://zonemaster-service.iis.se
 
 Routes for the selected languages must also be configured.
 
@@ -42,7 +42,7 @@ location /en {
 }
 
 location /api {
-	proxy_pass https://zmbackend03-dev.iis.se:8443;
+	proxy_pass https://zonemaster-service.iis.se;
 
 }
 ```
