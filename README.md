@@ -28,13 +28,20 @@ server_name .zonemaster.test;
 root "/home/vagrant/www/zonemaster.se/public";
 
 rewrite ^/(.+)(/assets/.+)$ $2 redirect;
+rewrite ^/run-test/?$ / redirect;
 
 location = / {
-	return 302 /sv/;
+		if ($arg_resultid) {
+				return 302 /sv/result/$arg_resultid;
+		}
+		return 302 /sv/;
 }
 
 location /en {
-	try_files $uri $uri/ /en/index.html?$query_string;
+		if ( $arg_resultid ) {
+				return 302  /en/result/$arg_resultid;
+		}
+		try_files $uri $uri/ /en/index.html?$query_string;
 }
 
  location /sv {
@@ -45,6 +52,15 @@ location /api {
 	proxy_pass https://zonemaster-service.iis.se;
 
 }
+
+index index.php index.html;
+	satisfy any;
+	allow 127.0.0.1;
+	allow 46.21.104.169;
+	deny all;
+	auth_basic "IIS Web Team.";
+	auth_basic_user_file /var/www/.htpasswd;
+	include global/restrictions.conf;
 ```
 
 If you are using Homestead you can add [this file](homestead/zonemaster.sh) to `Homestead/scripts/site-types` and add `type: "zonemaster"` in Homestead.yaml where you map the Zonemaster site. Reload the Vagrant box (add `--provision` if simply reloading the box doesn't work).
