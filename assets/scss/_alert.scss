@@ -103,4 +103,10 @@ $alert-text: $color-cyberspace;
 	max-width: calc(1360px / 1.5);
 	padding-left: rhythm(1);
 	padding-right: rhythm(1);
+
+	> div {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
 }
