@@ -53,7 +53,7 @@ host('stage')
 host('prod')
 	->setRemoteUser(getenv('DEPLOY_PROD_USER'))
 	->setHostname(getenv('DEPLOY_PROD_IP'))
-	->set('branch', 'master')
+	->set('branch', 'main')
 	->set('deploy_path', '/var/www/{{application}}')
 	->set('host', 'prod');
 
