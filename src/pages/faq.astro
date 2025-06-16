@@ -2,9 +2,15 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import FAQ from '@theme/Faq.astro';
 import Layout from '@theme/Layout.astro';
+<<<<<<< HEAD
 import config from '@/config';
 
 const defaultLocale = config.defaultLanguage || 'en';
+=======
+import { sourceLanguageTag } from '@/paraglide/runtime';
+
+const defaultLocale = sourceLanguageTag || 'en';
+>>>>>>> 6ff2543 (add new code base)
 const faq = await getCollection('faq', ({ id }) => {
     return id.startsWith(`${defaultLocale}/`);
 });

@@ -1,0 +1,11 @@
+html {
+    background-color: var(--color-palette-ash);
+}
+
+h1 {
+    font-family: var(--font-bold-family);
+}
+
+a {
+    color: var(--color-palette-cyberspace);
+}

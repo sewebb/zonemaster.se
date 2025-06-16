@@ -1,0 +1,17 @@
+article.zm-collapsible {
+    background-color: var(--color-subtle);
+    border-color: var(--color-palette-black-40);
+
+    a {
+        color: var(--color-palette-black);
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    .zm-collapsible-content {
+        border-color: var(--color-palette-black-40);
+    }
+}

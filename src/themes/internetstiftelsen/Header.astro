@@ -1,0 +1,23 @@
+---
+import LanguageSwitcher from '../default/LanguageSwitcher.astro';
+import Logo from './Logo.astro';
+import Navigation from '../default/Navigation.astro';
+import MobileMenuButton from '../default/MobileMenuButton.astro';
+import config from '@/config';
+---
+
+<header class="zm-header">
+    <div class="container">
+        <div class="zm-header__group">
+            <Logo />
+            <span class="zm-header__sitename" role="banner">{config.siteInfo.siteName}</span>
+            <div class="zm-header__navigation-group" id="mainMenu">
+                <Navigation />
+                <LanguageSwitcher />
+            </div>
+            <MobileMenuButton />
+        </div>
+    </div>
+</header>
+
+

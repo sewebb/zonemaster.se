@@ -1,0 +1,42 @@
+.zm-menu__list {
+    @media screen and (min-width: 768px) {
+        width: auto;
+        margin-left: auto;
+    }
+
+    li {
+        border-color: var(--color-palette-ocean);
+    }
+}
+
+.zm-menu__item {
+    font-family: var(--font-heading-family);
+    font-size: var(--font-s);
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &.is-active {
+        text-decoration: underline;
+
+        @media screen and (min-width: 768px) {
+            color: var(--color-palette-ruby);
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}

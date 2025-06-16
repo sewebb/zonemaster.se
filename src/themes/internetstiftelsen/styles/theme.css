@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@import 'manifest.css';
+
+:root {
+    /* Overwrite theme variables */
+    --color-border: #d8d8d8;
+    --color-palette-main-30: var(--color-palette-ocean-light);
+    --border-radius: 0.25rem;
+    --button-color: var(--color-palette-ocean-dark);
+    --button-border-color: var(--color-palette-ocean-dark);
+    --button-border-hover-color: var(--color-palette-ocean);
+
+    --button-secondary-color: var(--color-palette-ocean-light);
+    --button-secondary-color-hover: var(--color-palette-ocean);
+    --button-secondary-border-color: var(--color-palette-ocean);
+    --button-secondary-border-hover-color: var(--button-border-hover-color);
+
+    /* Add custom variables */
+    --font-body-family: 'HK Grotesk', sans-serif;
+    --font-heading-family: 'HK Grotesk Semibold', sans-serif;
+    --font-bold-family: 'HK Grotesk Bold', sans-serif;
+    --color-palette-ash: #ededed;
+    --color-palette-concrete: #d8d8d8;
+    --color-palette-granit: #8E9297;
+    --color-palette-cyberspace: #1f2a36;
+    --color-palette-jade: #55c7b4;
+    --color-palette-jade-light: #aae3d9;
+    --color-palette-ruby: #ff4069;
+    --color-palette-ocean: #50b2fc;
+    --color-palette-ocean-dark: #0477ce;
+    --color-palette-ocean-light: #a7d8fd;
+    --color-border-active: var(--color-palette-ocean-light);
+    --color-palette-input-color: #f7f7f7;
+}

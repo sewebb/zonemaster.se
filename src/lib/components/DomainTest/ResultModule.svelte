@@ -5,7 +5,10 @@
   import Badge from "@/lib/components/Badge/Badge.svelte";
   import ResultGroup from "@/lib/components/DomainTest/ResultGroup.svelte";
   import {expandedModules, toggleModule} from "@/lib/components/DomainTest/store.svelte.ts";
+<<<<<<< HEAD
   import { resultIcon } from '@/lib/resultIcon.ts';
+=======
+>>>>>>> 6ff2543 (add new code base)
 
   type Props = {
     module: string;
@@ -27,10 +30,14 @@
       <span>{niceName(module)}</span>
 
       {#each summary as { level, count }, i}
+<<<<<<< HEAD
         <Badge level={level} round>
             <i class="bi bi-{resultIcon(level)}"></i>
             {count}
         </Badge>
+=======
+        <Badge level={level} round>{count}</Badge>
+>>>>>>> 6ff2543 (add new code base)
       {/each}
     </button>
   </h3>

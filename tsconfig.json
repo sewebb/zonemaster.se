@@ -1,14 +1,14 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@theme/*": ["./src/themes/default/*"]
-    },
-    "resolveJsonModule": true,
-    "esModuleInterop": true
-  }
+    "extends": "astro/tsconfigs/strict",
+    "include": [".astro/types.d.ts", "**/*"],
+    "exclude": ["dist"],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@theme/*": ["./src/themes/internetstiftelsen/*"]
+        },
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    }
 }

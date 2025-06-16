@@ -1,0 +1,6 @@
+@import '../../default/styles/theme.css';
+@import '../../default/styles/styles.css';
+@import '../../default/styles/foundation.css';
+@import '../../default/styles/utilities/manifest.css';
+@import '../../default/styles/tab-highlighting.css';
+@import 'theme.css';

@@ -1,0 +1,7 @@
+.zm-language-switcher__select {
+    background-color: var(--color-palette-input-color);
+
+    &:focus {
+        border-color: var(--color-border-active);
+    }
+}

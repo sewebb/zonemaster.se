@@ -1,0 +1,41 @@
+button.zm-button {
+    &.zm-button--primary {
+        &:hover,
+        &:focus {
+            background-color: var(--color-palette-ocean);
+            border-color: var(--button-border-hover-color);
+
+            &[aria-controls="advanced-options"] {
+                i {
+                    color: var(--color-palette-ocean);
+                }
+            }
+        }
+    }
+
+    &.zm-button--transparent {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    &[aria-controls="advanced-options"] {
+        i {
+            color: var(--color-palette-ocean-dark);
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+
+            + label {
+                text-decoration: underline;
+            }
+
+            &[aria-controls="advanced-options"] {
+                i {
+                    color: var(--color-palette-ocean);
+                }
+            }
+        }
+    }
+}
