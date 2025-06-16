@@ -12,7 +12,10 @@
     import type { FaqItem } from '@/content.config.ts';
     import { exportCSV, exportHTML, exportJson, exportText } from '@/lib/export.ts';
     import Copy from '../Copy/Copy.svelte';
+<<<<<<< HEAD
     import { resultIcon } from '@/lib/resultIcon.ts';
+=======
+>>>>>>> 6ff2543 (add new code base)
 
     type Props = {
         data: ResultData;
@@ -92,12 +95,15 @@
             showShare = false;
         }
     });
+<<<<<<< HEAD
 
     let shareUrl = window.location.href;
 
     if (shareUrl.includes('#')) {
         shareUrl = shareUrl.split('#')[0];
     }
+=======
+>>>>>>> 6ff2543 (add new code base)
 </script>
 <div class="zm-result">
     <h2 class="zm-result__title">Test result for {data.params.domain}</h2>
@@ -118,14 +124,19 @@
                     type="button"
                     aria-controls="zmExportDialog"
                     onclick={() => {
+<<<<<<< HEAD
                         showExport = !showExport;
                         showShare = false;
+=======
+                    showExport = !showExport;
+>>>>>>> 6ff2543 (add new code base)
                     }}
                     id="zmExportButton"
                 >
                     <i class="bi bi-cloud-arrow-down"></i>
                     Export
                 </Button>
+<<<<<<< HEAD
                 <div class="zm-popover__content" role="dialog" id="zmExportDialog"
                      style:display={showExport ? 'block' : 'none'}>
                     <div class="{stack.stack} {stack.middle} {stack.spaceBetween} {stack['gap--s']}">
@@ -133,6 +144,14 @@
                         <button class="zm-popover__plain-btn" onmousedown={() => exportHTML(data)}>HTML</button>
                         <button class="zm-popover__plain-btn" onmousedown={() => exportCSV(data)}>CSV</button>
                         <button class="zm-popover__plain-btn" onmousedown={() => exportText(data)}>TEXT</button>
+=======
+                <div class="zm-popover__content" role="dialog" id="zmExportDialog" style:display={showExport ? 'block' : 'none'}>
+                    <div class="{stack.stack} {stack.middle} {stack.spaceBetween} {stack['gap--s']}">
+                        <button onmousedown={() => exportJson(data)}>JSON</button>
+                        <button onmousedown={() => exportHTML(data)}>HTML</button>
+                        <button onmousedown={() => exportCSV(data)}>CSV</button>
+                        <button onmousedown={() => exportText(data)}>TEXT</button>
+>>>>>>> 6ff2543 (add new code base)
                     </div>
                 </div>
             </div>
@@ -144,17 +163,27 @@
                     aria-controls="copyURLDialog"
                     onclick={() => {
                         showShare = !showShare;
+<<<<<<< HEAD
                         showExport = false;
+=======
+>>>>>>> 6ff2543 (add new code base)
                     }}
                 >
                     <i class="bi bi-share"></i>
                     Share
                 </Button>
+<<<<<<< HEAD
                 <div class="zm-popover__content" role="dialog" id="copyURLDialog"
                      style:display={showShare ? 'block' : 'none'}>
                     <div class="{stack.stack} {stack.stretch} {stack.spaceBetween} {stack['gap--s']}">
                         <Input matchContentWidth size="small" type="text" readonly name="url" value={shareUrl} />
                         <Copy value={shareUrl} />
+=======
+                <div class="zm-popover__content" role="dialog" id="copyURLDialog" style:display={showShare ? 'block' : 'none'}>
+                    <div class="{stack.stack} {stack.stretch} {stack.spaceBetween} {stack['gap--s']}">
+                        <Input size="small" type="text" readonly name="url" value={window.location.href} />
+                        <Copy value={window.location.href} />
+>>>>>>> 6ff2543 (add new code base)
                     </div>
                 </div>
             </div>
@@ -163,6 +192,7 @@
     <Stack vertical gap="m">
         <fieldset class="zm-fieldset">
             <legend>Filter severity levels</legend>
+<<<<<<< HEAD
             <Stack gap="xs" middle wrap>
                 <FilterToggle
                     name="filter[all]"
@@ -222,12 +252,35 @@
                     severity="critical"
                     value="critical"
                 />
+=======
+            <Stack middle wrap>
+                <FilterToggle name="filter[all]" label="All" badge={data.results.length} bind:checked={filterAll}
+                            onCheck={onCheck} value="all" />
+                <FilterToggle name="filter[info]" label="Info" badge={data.results.filter((r) => r.level === 'INFO').length}
+                            bind:checked={filterInfo} onCheck={onCheck} severity="info" value="info" />
+                <FilterToggle name="filter[notice]" label="Notice"
+                            badge={data.results.filter((r) => r.level === 'NOTICE').length} bind:checked={filterNotice}
+                            onCheck={onCheck} severity="notice" value="notice" />
+                <FilterToggle name="filter[warning]" label="Warning"
+                            badge={data.results.filter((r) => r.level === 'WARNING').length} bind:checked={filterWarning}
+                            onCheck={onCheck} severity="warning" value="warning" />
+                <FilterToggle name="filter[error]" label="Error"
+                            badge={data.results.filter((r) => r.level === 'ERROR').length} bind:checked={filterError}
+                            onCheck={onCheck} severity="error" value="error" />
+                <FilterToggle name="filter[critical]" label="Critical"
+                            badge={data.results.filter((r) => r.level === 'CRITICAL').length}
+                            bind:checked={filterCritical} onCheck={onCheck} severity="critical" value="critical" />
+>>>>>>> 6ff2543 (add new code base)
             </Stack>
         </fieldset>
         {#if aboutLevels}
             <Collapsible title={aboutLevels.question} id={'helper'} content={aboutLevels.answer}></Collapsible>
         {/if}
+<<<<<<< HEAD
         <fieldset class="zm-fieldset {stack.stack} {stack.wrap} {stack.bottom} {stack['gap--xs']}">
+=======
+        <fieldset class="zm-fieldset {stack.stack} {stack.bottom} {stack['gap--xs']}">
+>>>>>>> 6ff2543 (add new code base)
             <div class={stack.expand}>
                 <Input
                     id="filterQuery"

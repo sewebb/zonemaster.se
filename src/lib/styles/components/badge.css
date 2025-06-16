@@ -1,6 +1,7 @@
 .zm-badge {
     background: var(--color-muted);
     color: var(--color-palette-white);
+<<<<<<< HEAD
     font-size: calc(var(--font-xs) * 1.2);
     border-radius: var(--border-radius);
     display: inline-flex;
@@ -25,26 +26,52 @@
     &.zm-bg-info {
         background: var(--color-palette-success-50);
         --badge-color-dark: var(--color-palette-success-70);
+=======
+    font-size: var(--font-s);
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 1;
+    padding: var(--spacing-xxs);
+
+    &.zm-bg-info {
+        background: var(--color-palette-success-50);
+        color: var(--color-palette-black);
+>>>>>>> 6ff2543 (add new code base)
     }
 
     &.zm-bg-notice {
         background: var(--color-palette-info-50);
+<<<<<<< HEAD
         --badge-color-dark: var(--color-palette-info-70);
+=======
+        color: var(--color-palette-black);
+>>>>>>> 6ff2543 (add new code base)
     }
 
     &.zm-bg-warning {
         background: var(--color-palette-warning-50);
         color: var(--color-palette-black);
+<<<<<<< HEAD
         --badge-color-dark: '';
+=======
+>>>>>>> 6ff2543 (add new code base)
     }
 
     &.zm-bg-error {
         background: var(--color-palette-error-50);
+<<<<<<< HEAD
         --badge-color-dark: var(--color-palette-error-70);
+=======
+>>>>>>> 6ff2543 (add new code base)
     }
 
     &.zm-bg-critical {
         background: var(--color-palette-error-70);
+<<<<<<< HEAD
         --badge-color-dark: '';
     }
 
@@ -78,5 +105,16 @@
         font-size: var(--font-xs);
         padding: var(--spacing-xxs) var(--spacing-xs);
         border-radius: calc(var(--border-radius) / 2);
+=======
+    }
+
+    &.zm-badge--round {
+        border-radius: 50%;
+        font-size: var(--font-xs);
+        padding: 0;
+        width: 1.8em;
+        height: 1.8em;
+        transform: translateY(0);
+>>>>>>> 6ff2543 (add new code base)
     }
 }

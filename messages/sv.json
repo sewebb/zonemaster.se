@@ -13,7 +13,10 @@
     "menu": "Meny",
     "close": "Stäng",
     "domain": "Domän",
+<<<<<<< HEAD
     "domainName": "Domänamn",
+=======
+>>>>>>> 6ff2543 (add new code base)
     "showOptions": "Fler inställningar",
     "noticeHeading": "Info! Mer info om test av odelegerad domän",
     "noticeLink": "/sv/faq/#undelegated",
