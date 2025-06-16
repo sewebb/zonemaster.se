@@ -3,7 +3,11 @@ import packageJson from './package.json';
 
 const config: Config = {
     defaultLanguage: 'sv',
+<<<<<<< HEAD
     enabledLanguages: ['da', 'en', 'es', 'fi', 'fr', 'nb', 'sv', 'sl'],
+=======
+    enabledLanguages: ['da', 'en', 'es', 'fi', 'fr', 'nb', 'sv'],
+>>>>>>> f7e27b5 (add new code base)
     apiBaseUrl: import.meta.env.PUBLIC_API_URL || '/api',
     pollingInterval: import.meta.env.PUBLIC_POLLING_INTERVAL || 5000,
     clientInfo: {

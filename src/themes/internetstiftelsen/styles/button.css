@@ -11,6 +11,7 @@ button.zm-button {
                 }
             }
         }
+<<<<<<< HEAD
 
         &[disabled],
         &[disabled]:focus,
@@ -21,6 +22,8 @@ button.zm-button {
             text-shadow: 0 1px 0 var(--color-palette-black-0);
             cursor: not-allowed;
         }
+=======
+>>>>>>> f7e27b5 (add new code base)
     }
 
     &.zm-button--transparent {

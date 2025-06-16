@@ -166,9 +166,9 @@
                             >
                                 <i class="bi bi-trash"></i>
                                 <span class="zm-u-visually-hidden"
-                                    >{m.deleteNameserver({
-                                        index: i + 1,
-                                    })}</span
+                                >{m.deleteNameserver({
+                                    index: i + 1,
+                                })}</span
                                 >
                             </Button>
                         </div>
