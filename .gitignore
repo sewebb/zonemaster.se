@@ -3,7 +3,6 @@
 # build output
 dist/
 public/
-vendor/
 
 # generated types
 .astro/
@@ -54,10 +53,5 @@ node_modules/
 # OS
 .DS_store
 
-*storybook.log
-*.zip
-#Compiles assets
-public/assets/js/*
-public/assets/css/*
 *storybook.log
 *.zip

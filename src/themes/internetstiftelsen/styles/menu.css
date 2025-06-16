@@ -15,9 +15,12 @@
 
     &:hover,
     &:focus {
+<<<<<<< HEAD
         text-decoration: underline !important;
         font-weight: normal;
         color: var(--color-palette-black);
+=======
+>>>>>>> 5447d5d (add new code base)
         text-decoration: underline;
 
         &::after {
@@ -27,7 +30,10 @@
 
     &.is-active {
         text-decoration: underline;
+<<<<<<< HEAD
         font-weight: normal;
+=======
+>>>>>>> 5447d5d (add new code base)
 
         @media screen and (min-width: 768px) {
             color: var(--color-palette-ruby);
