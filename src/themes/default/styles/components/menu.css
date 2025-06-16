@@ -41,7 +41,11 @@
     display: flex;
     align-items: center;
     width: 100%;
+<<<<<<< HEAD
     color: var(--color-text );
+=======
+    color: var(--color-muted);
+>>>>>>> 6ff2543 (add new code base)
     padding: var(--spacing-s);
 
     &.active {
@@ -55,6 +59,7 @@
 
     &:hover,
     &.is-active {
+<<<<<<< HEAD
         color: var(--color-text-highlight);
         text-decoration: underline;
         font-weight: bold;
@@ -66,6 +71,12 @@
                 text-decoration: none;
             }
 
+=======
+        color: var(--color-text);
+        position: relative;
+
+        @media screen and (min-width: 769px) {
+>>>>>>> 6ff2543 (add new code base)
             &::after {
                 content: '';
                 position: absolute;
@@ -73,7 +84,11 @@
                 left: 0;
                 width: 100%;
                 height: 5px;
+<<<<<<< HEAD
                 background-color: var(--color-text-highlight);
+=======
+                background-color: var(--color-palette-main-30);
+>>>>>>> 6ff2543 (add new code base)
             }
         }
     }
