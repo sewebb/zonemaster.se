@@ -12,9 +12,9 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createUnsafeImmutable(__DIR__);
 
 if (file_exists(__DIR__.'/.env')) {
-	$dotenv->load();
+    $dotenv->load();
 } else {
-	exit('Please create an .env file to continue');
+    exit('Please create an .env file to continue');
 }
 
 // Project name
@@ -44,45 +44,45 @@ add('writable_dirs', []);
 
 // Hosts
 host('stage')
-	->setRemoteUser(getenv('DEPLOY_STAGE_USER'))
-	->setHostname(getenv('DEPLOY_STAGE_IP'))
-	->set('branch', 'feature/new-gui')
-	->set('deploy_path', '/var/www/{{application}}')
-	->set('host', 'stage');
+    ->setRemoteUser(getenv('DEPLOY_STAGE_USER'))
+    ->setHostname(getenv('DEPLOY_STAGE_IP'))
+    ->set('branch', 'feature/new-gui')
+    ->set('deploy_path', '/var/www/{{application}}')
+    ->set('host', 'stage');
 
 host('prod')
-	->setRemoteUser(getenv('DEPLOY_PROD_USER'))
-	->setHostname(getenv('DEPLOY_PROD_IP'))
-	->set('branch', 'main')
-	->set('deploy_path', '/var/www/{{application}}')
-	->set('host', 'prod');
+    ->setRemoteUser(getenv('DEPLOY_PROD_USER'))
+    ->setHostname(getenv('DEPLOY_PROD_IP'))
+    ->set('branch', 'main')
+    ->set('deploy_path', '/var/www/{{application}}')
+    ->set('host', 'prod');
 
 
 task(
-	'git:tag',
-	function () {
-		$host = get('host');
+    'git:tag',
+    function () {
+        $host = get('host');
 
-		if ($host !== 'prod') {
-			return;
-		}
+        if ($host !== 'prod') {
+            return;
+        }
 
-		$date = runLocally('date +"%y%m%d%H%M"');
-		$release = get('release_name');
-		$release_tag = 'v-'.$date.'-'.$release;
-		$branch = get('branch', 'unknown');
-		$message = 'Deployed branch '.$branch.' to '.$host;
+        $date = runLocally('date +"%y%m%d%H%M"');
+        $release = get('release_name');
+        $release_tag = 'v-'.$date.'-'.$release;
+        $branch = get('branch', 'unknown');
+        $message = 'Deployed branch '.$branch.' to '.$host;
 
-		runLocally("git tag $release_tag -m '{$message}'");
-		runLocally('git push origin --tags');
-	}
+        runLocally("git tag $release_tag -m '{$message}'");
+        runLocally('git push origin --tags');
+    }
 )->desc('Create release tag');
 
 task(
-	'npm:production',
-	function () {
-		run('cd {{release_path}} && npm run build');
-	}
+    'npm:production',
+    function () {
+        run('cd {{release_path}} && npm run build');
+    }
 );
 
 
