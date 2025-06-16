@@ -65,7 +65,6 @@
 >
     <Stack>
         <div class="zm-domain-test__progress">
-<<<<<<< HEAD
             <label class="zm-u-visually-hidden" for="domainInput"
             >{m.domainName()}</label
             >
@@ -83,11 +82,6 @@
                     '/domain',
                 )}
             />
-=======
-            <label class="zm-u-visually-hidden" for="domainInput">{m.domainName()}</label>
-            <Input required name="domain" id="domainInput" type="text" bind:value={domain} placeholder={m.domainName()} disabled={currentState === 'testing'}
-                   class={ currentState === 'finished' ? 'finished' : undefined } />
->>>>>>> 8f9e64e (merge main repository)
             {#if currentState === 'testing'}
                 {#key currentState}
                     <span
@@ -108,16 +102,12 @@
             {/if}
         </Button>
     </Stack>
-<<<<<<< HEAD
     <Switch
         id="advanced-toggle"
         controls="advanced-options"
         active={advanced}
         onClick={() => (advanced = !advanced)}
     >
-=======
-    <Switch id="advanced-toggle" controls="advanced-options" active={advanced} onClick={() => advanced = !advanced}>
->>>>>>> 8f9e64e (merge main repository)
         {advanced ? m.hideOptions() : m.showOptions()}
     </Switch>
     <div id="advanced-options" hidden={!advanced}>
