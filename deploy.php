@@ -79,9 +79,9 @@ task(
 )->desc('Create release tag');
 
 task(
-    'npm:production',
+    'npm:build',
     function () {
-        run('cd {{release_path}} && npm run production');
+        run('cd {{release_path}} && npm run build');
     }
 );
 
@@ -93,7 +93,7 @@ after('deploy:success', 'git:tag');
 after('deploy:failed', 'slack:notify:failure');
 
 after('deploy:update_code', 'npm:install');
-after('deploy:update_code', 'npm:production');
+after('deploy:update_code', 'npm:build');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
