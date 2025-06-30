@@ -13,33 +13,23 @@
     "menu": "Menu",
     "close": "Close",
     "domain": "Domain",
-<<<<<<< HEAD
     "domainName": "Domain name",
     "showOptions": "Show options",
     "hideOptions": "Hide options",
-=======
-    "showOptions": "Show options",
->>>>>>> 6ff2543 (add new code base)
     "noticeHeading": "Notice! More info on undelegated test",
     "noticeLink": "/faq/#undelegated",
     "noticeText": "What is an undelegated domain test?",
     "nameServers": "Nameservers",
-<<<<<<< HEAD
     "nameserver": "Nameserver {index}",
     "deleteNameserver": "Delete nameserver {index}",
-=======
->>>>>>> 6ff2543 (add new code base)
     "name": "Name",
     "addressOptional": "Address (optional)",
     "fetchNameservers": "Fetch nameservers from parent zone",
     "noNameservers": "No nameservers found in parent zone",
     "fetching": "Fetching...",
     "DSRecords": "DS records",
-<<<<<<< HEAD
     "dsRecord": "DS record {index}",
     "deleteDSRecord": "Delete DS record {index}",
-=======
->>>>>>> 6ff2543 (add new code base)
     "fetchDSRecords": "Fetch DS from parent zone",
     "noDSRecords": "No DS records found in parent zone",
     "keytag": "Keytag",
@@ -65,14 +55,10 @@
     "img2Alt": "The world connected by a network",
     "faqPreamble": "Find answers to common questions about Zonemaster here.",
     "faqTextParagraph1": "You still don't find the information you are looking for? You can contact the Zonemaster project team using the",
-<<<<<<< HEAD
     "faqParagraph1Link": "user mailing list, the issue tracker or the contact e-mail address.",
     "history": "History",
     "testHistory": "Test history",
     "undelegated": "Undelegated",
     "delegated": "Delegated",
     "historyAll": "All"
-=======
-    "faqParagraph1Link": "user mailing list, the issue tracker or the contact e-mail address."
->>>>>>> 6ff2543 (add new code base)
 }

@@ -37,3 +37,7 @@
         url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-Bold.woff') format('woff');
     font-display: swap;
 }
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}

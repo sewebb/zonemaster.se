@@ -1,12 +1,7 @@
 ---
-<<<<<<< HEAD
 import { languageTag } from '@/paraglide/runtime';
 import * as m from '@/paraglide/messages';
 import config from '@/config';
-=======
-import { languageTag, sourceLanguageTag } from '@/paraglide/runtime';
-import * as m from '@/paraglide/messages';
->>>>>>> 6ff2543 (add new code base)
 
 const currentLanguage = languageTag();
 const languages = {
@@ -23,16 +18,12 @@ const languages = {
 <div class="zm-language-switcher">
     <i class="bi bi-translate zm-language-switcher__icon"></i>
     <label for="languageSwitcher" class="zm-u-visually-hidden"
-        >{m.langLabel()}</label
+    >{m.langLabel()}</label
     >
     <select
         class="zm-language-switcher__select"
         id="languageSwitcher"
-<<<<<<< HEAD
         data-source-language={config.defaultLanguage}
-=======
-        data-source-language={sourceLanguageTag}
->>>>>>> 6ff2543 (add new code base)
         data-current-language={currentLanguage}
     >
         {
