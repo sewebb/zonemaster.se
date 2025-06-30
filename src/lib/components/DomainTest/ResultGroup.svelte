@@ -1,4 +1,8 @@
 <script lang="ts">
+<<<<<<< HEAD
+=======
+    import type { ResultDataResult } from '@/lib/client.ts';
+>>>>>>> 8f9e64e (merge main repository)
     import niceName from '@/lib/niceName.ts';
     import Badge from '@/lib/components/Badge/Badge.svelte';
     import type { Testcase } from '@/types.ts';

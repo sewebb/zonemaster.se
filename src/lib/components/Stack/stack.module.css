@@ -114,11 +114,8 @@
  *  ==================================== */
 .expand {
     flex: 1;
-<<<<<<< HEAD
 
     @media screen and (max-width: 568px) {
         flex-basis: 100%;
     }
-=======
->>>>>>> 6ff2543 (add new code base)
 }

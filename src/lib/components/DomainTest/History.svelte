@@ -92,7 +92,7 @@
         {#each paginatedHistory as item}
             <li class="{item.overall_result}">
                 <a href={`/result/${item.id}`} onclick={onClickLink}>
-                    {item.created_at}
+                    {formatDate(item.created_at)}
                 </a>
                 {#if item.undelegated}
                     <span>{m.undelegated()}</span>

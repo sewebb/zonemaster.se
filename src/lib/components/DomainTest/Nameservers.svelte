@@ -103,10 +103,14 @@
     <legend>{m.nameServers()}</legend>
     <Stack vertical gap="s">
         {#each nameservers as ns, i}
+<<<<<<< HEAD
             <fieldset
                 class="zm-domain-test__nameserver zm-fieldset"
                 id="zmDomainTestNameserver-{i + 1}"
             >
+=======
+            <fieldset class="zm-domain-test__nameserver zm-fieldset" id="zmDomainTestNameserver-{ i + 1 }">
+>>>>>>> 8f9e64e (merge main repository)
                 <legend>{m.nameserver({ index: i + 1 })}</legend>
                 <Stack gap="xs" class={utils.expand}>
                     <Grid cols={2} gap="xs">
