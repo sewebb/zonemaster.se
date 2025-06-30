@@ -1,190 +1,121 @@
+<svelte:options customElement={{ tag: 'zm-domain-test', shadow: 'none' }} />
+
 <script lang="ts">
+    import Button from '../Button/Button.svelte';
+    import Input from '../Input/Input.svelte';
     import * as m from '@/paraglide/messages';
-    import Grid from '@/lib/components/Grid/Grid.svelte';
-    import Input from '@/lib/components/Input/Input.svelte';
-    import Button from '@/lib/components/Button/Button.svelte';
+    import Switch from '@/lib/components/Switch/Switch.svelte';
+    import Advanced from '@/lib/components/DomainTest/Advanced.svelte';
     import Stack from '@/lib/components/Stack/Stack.svelte';
-    import utils from '@/lib/utils.module.css';
-    import { fetchFromParent } from '@/lib/client.ts';
-    import { warn } from '@/lib/alert.svelte.ts';
-    import { getValidationErrorByPath } from '@/lib/getValidationErrorByPath.ts';
+    import Result from '@/lib/components/DomainTest/Result.svelte';
     import { machine, transition } from '@/lib/machine.svelte.ts';
+    import Route from '@/lib/components/Route/Route.svelte';
+    import formToObj from '@/lib/formToObj.ts';
+    import type { FaqItem } from '@/content.config.ts';
+    import { getValidationErrorByPath } from '@/lib/getValidationErrorByPath.ts';
 
-    let { currentContext } = $derived(machine);
-    let fetchingZoneData = $state(false);
-    let nameservers = $state([{ ns: '', ip: '' }]);
+    type Props = {
+        aboutLevels: FaqItem | null;
+    };
 
-    // On input change, append a new empty nameserver
-    function addNameserver() {
-        nameservers = [...nameservers, { ns: '', ip: '' }];
-    }
+    const { aboutLevels }: Props = $props();
 
-    // On input change, update the nameserver at the given index
-    function updateNameserver(index: number, key: string, value: string): void {
-        nameservers = nameservers.map((ns, i) => {
-            if (i === index) {
-                return { ...ns, [key]: value };
-            }
-            return ns;
-        });
+    let domain = $state('');
+    let advanced = $state(false);
+    let { currentState, currentContext, previousState } = $derived(machine);
 
-        if (index === nameservers.length - 1 && value) {
-            addNameserver();
-        }
-    }
+    function startTest(e: Event) {
+        e.preventDefault();
 
-    function removeNameserver(index: number): void {
-        if (nameservers.length < 2) {
+        const form = e.target as HTMLFormElement;
+
+        if (!form.reportValidity()) {
             return;
         }
 
-        nameservers = nameservers.filter((_, i) => i !== index);
-    }
+        const formData: Record<string, any> = formToObj(form);
 
-    function fetch(e: Event): void {
-        const target = e.target as HTMLButtonElement;
-        const form = target.closest('form');
-
-        if (!form) {
+        if (!formData.domain) {
             return;
         }
 
-        if (form.reportValidity() === false) {
-            return;
+        if (formData.iptype) {
+            formData.ipv4 = formData.iptype !== 'ipv6';
+            formData.ipv6 = formData.iptype !== 'ipv4';
+
+            delete formData.iptype;
         }
 
-        const input = form.querySelector(
-            'input[name="domain"]',
-        ) as HTMLInputElement;
-        const domain = input.value;
-
-        fetchingZoneData = true;
-
-        fetchFromParent(domain)
-            .then((data) => {
-                if (!data.ns_list || !data.ns_list.length) {
-                    warn(m.noNameservers());
-
-                    return;
-                }
-
-                nameservers = data.ns_list.map((ns) => ({
-                    ns: ns.ns,
-                    ip: ns.ip || '',
-                }));
-            })
-            .catch((error) => {
-                console.log(error.data);
-                transition('ERROR', error);
-            })
-            .finally(() => {
-                fetchingZoneData = false;
-            });
-    }
-
-    function reset() {
-        nameservers = [{ ns: '', ip: '' }];
+        transition('START', formData);
     }
 
     $effect(() => {
-        document
-            .getElementById('zmDomainTestForm')
-            ?.addEventListener('reset', reset);
-
-        return () => {
-            document
-                .getElementById('zmDomainTestForm')
-                ?.removeEventListener('reset', reset);
-        };
+        if (currentState === 'complete' && previousState === 'testing') {
+            document.location.href = `/result/${currentContext.testId}`;
+            transition('RESET');
+        }
     });
 </script>
 
-<fieldset class="zm-domain-test__nameservers">
-    <legend>{m.nameServers()}</legend>
-    <Stack vertical gap="s">
-        {#each nameservers as ns, i}
-            <fieldset
-                class="zm-domain-test__nameserver zm-fieldset"
-                id="zmDomainTestNameserver-{i + 1}"
+<form
+    id="zmDomainTestForm"
+    novalidate
+    onsubmit={startTest}
+    class="zm-domain-test {currentState === 'testing' ? 'zm-is-testing' : ''}"
+>
+    <Stack>
+        <div class="zm-domain-test__progress">
+            <label class="zm-u-visually-hidden" for="domainInput"
+            >{m.domainName()}</label
             >
-                <legend>{m.nameserver({ index: i + 1 })}</legend>
-                <Stack gap="xs" class={utils.expand}>
-                    <Grid cols={2} gap="xs">
-                        <div>
-                            <Input
-                                id="nameservers[{i}][ns]"
-                                name="nameservers[{i}][ns]"
-                                type="text"
-                                value={ns.ns}
-                                placeholder="ns1.example.com"
-                                label={m.name()}
-                                onInput={(e) =>
-                                    updateNameserver(
-                                        i,
-                                        'ns',
-                                        e.currentTarget.value,
-                                    )}
-                                required={!!ns.ip}
-                                error={getValidationErrorByPath(
-                                    currentContext.error,
-                                    `/nameservers/${i}/ns`,
-                                )}
-                            />
-                        </div>
-                        <div>
-                            <Input
-                                id="nameservers[{i}][ip]"
-                                name="nameservers[{i}][ip]"
-                                value={ns.ip}
-                                type="text"
-                                placeholder=""
-                                label={m.addressOptional()}
-                                onInput={(e) =>
-                                    updateNameserver(
-                                        i,
-                                        'ip',
-                                        e.currentTarget.value,
-                                    )}
-                                error={getValidationErrorByPath(
-                                    currentContext.error,
-                                    `/nameservers/${i}/ip`,
-                                )}
-                            />
-                        </div>
-                    </Grid>
-                    {#if nameservers.length > 1}
-                        <div>
-                            <span
-                                class="zm-label zm-label--hidden"
-                                role="presentation">–</span
-                            >
-                            <Button
-                                aria-controls="zmDomainTestNameserver-{i + 1}"
-                                variant="danger"
-                                type="button"
-                                onClick={() => removeNameserver(i)}
-                            >
-                                <i class="bi bi-trash"></i>
-                                <span class="zm-u-visually-hidden"
-                                >{m.deleteNameserver({
-                                    index: i + 1,
-                                })}</span
-                                >
-                            </Button>
-                        </div>
-                    {/if}
-                </Stack>
-            </fieldset>
-        {/each}
+            <Input
+                required
+                name="domain"
+                id="domainInput"
+                type="text"
+                bind:value={domain}
+                placeholder={m.domainName()}
+                disabled={currentState === 'testing'}
+                class={currentState === 'finished' ? 'finished' : undefined}
+                error={getValidationErrorByPath(
+                    currentContext.error,
+                    '/domain',
+                )}
+            />
+            {#if currentState === 'testing'}
+                {#key currentState}
+                    <span
+                        class="zm-domain-test__progress-bar"
+                        style="width: {currentContext.progress}%"
+                    ></span>
+                {/key}
+            {/if}
+        </div>
         <Button
-            class={utils.selfLeft}
-            variant="secondary"
-            size="small"
-            type="button"
-            onClick={fetch}
-            disabled={fetchingZoneData}
+            type="submit"
+            disabled={currentState === 'testing'}
+            variant="primary"
         >
-            {fetchingZoneData ? m.fetching() : m.fetchNameservers()}
+            {currentState !== 'testing' ? m.startTestBtn() : m.runningTest()}
+            {#if currentState === 'testing'}
+                {currentContext.progress}%
+            {/if}
         </Button>
     </Stack>
-</fieldset>
+    <Switch
+        id="advanced-toggle"
+        controls="advanced-options"
+        active={advanced}
+        onClick={() => (advanced = !advanced)}
+    >
+        {advanced ? m.hideOptions() : m.showOptions()}
+    </Switch>
+    <div id="advanced-options" hidden={!advanced}>
+        {#if advanced}
+            <Advanced />
+        {/if}
+    </div>
+</form>
+<Route path="/result/:id">
+    <Result {aboutLevels} />
+</Route>
