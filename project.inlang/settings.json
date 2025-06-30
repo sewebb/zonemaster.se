@@ -1,14 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/project-settings",
-<<<<<<< HEAD
   "sourceLanguageTag": "sv",
-=======
-<<<<<<< HEAD
-  "sourceLanguageTag": "en",
-=======
-  "sourceLanguageTag": "sv",
->>>>>>> 6ff2543 (add new code base)
->>>>>>> 4a16f44 (add new code base)
   "languageTags": [
     "en",
     "da",
