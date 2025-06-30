@@ -1,22 +1,11 @@
 ---
 import Welcome from '@theme/StartTest.astro';
 import Layout from '@theme/Layout.astro';
-<<<<<<< HEAD
 import config from '@/config';
 
 export function getStaticPaths() {
     return config.enabledLanguages
         .filter((lang) => lang !== config.defaultLanguage)
-=======
-import Article from '@/themes/default/Article.astro';
-import { availableLanguageTags, sourceLanguageTag } from '@/paraglide/runtime';
-
-console.log(sourceLanguageTag);
-
-export function getStaticPaths() {
-    return availableLanguageTags
-        .filter((lang) => lang !== sourceLanguageTag)
->>>>>>> 6ff2543 (add new code base)
         .map((lang) => ({ params: { lang } }));
 }
 
@@ -25,8 +14,4 @@ export const prerender = true;
 
 <Layout>
     <Welcome />
-<<<<<<< HEAD
-=======
-    <Article />
->>>>>>> 6ff2543 (add new code base)
 </Layout>
