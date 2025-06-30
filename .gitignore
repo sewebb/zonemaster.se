@@ -59,9 +59,3 @@ node_modules/
 #Compiles assets
 public/assets/js/*
 public/assets/css/*
-<<<<<<< HEAD
-=======
-
-*storybook.log
-*.zip
->>>>>>> 5447d5d (add new code base)
