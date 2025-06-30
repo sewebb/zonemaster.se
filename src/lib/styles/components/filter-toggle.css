@@ -14,17 +14,13 @@
     padding: var(--spacing-xs);
     font-weight: 500;
     border: 1px solid var(--border-color);
-<<<<<<< HEAD
     background-color: var(--color-palette-white);
-=======
->>>>>>> 6ff2543 (add new code base)
 
     &:hover {
         background: var(--color-subtle);
         border-color: var(--active-border-color);
     }
 
-<<<<<<< HEAD
     &:has(input[type="checkbox"]):focus,
     &:has(input[type="checkbox"]):focus-within {
         box-shadow: 0 0 0 2px var(--color-palette-white), 0 0 0 4px var(--color-tab-highlight);
@@ -41,16 +37,6 @@
         background: var(--active-color);
         color: var(--active-text-color);
 
-=======
-    &.zm-is-active {
-        background: var(--active-color);
-        color: var(--active-text-color);
-        --active-border-color: var(--color-palette-black-40);
-        --border-color: var(--color-palette-black-40);
-        --badge-color: var(--color-palette-info-50);
-        --badge-text-color: var(--color-palette-black);
-
->>>>>>> 6ff2543 (add new code base)
         &:hover {
             --active-border-color: var(--color-palette-black-40);
         }
@@ -60,10 +46,7 @@
         --active-color: var(--color-palette-success-50);
         --active-text-color: var(--color-palette-success-0);
         --badge-color: var(--color-palette-success-70);
-<<<<<<< HEAD
         --badge-color-dark: var(--color-palette-success-90);
-=======
->>>>>>> 6ff2543 (add new code base)
         --badge-text-color: var(--color-palette-white);
         --border-color: var(--color-palette-success-50);
         --active-border-color: var(--color-palette-success-50);
@@ -77,10 +60,7 @@
         --active-color: var(--color-palette-info-50);
         --active-text-color: var(--color-palette-info-0);
         --badge-color: var(--color-palette-info-70);
-<<<<<<< HEAD
         --badge-color-dark: var(--color-palette-info-90);
-=======
->>>>>>> 6ff2543 (add new code base)
         --badge-text-color: var(--color-palette-white);
         --border-color: var(--color-palette-info-50);
         --active-border-color: var(--color-palette-info-50);
@@ -93,10 +73,7 @@
     &.zm-is-active.zm--warning {
         --active-color: var(--color-palette-warning-50);
         --badge-color: var(--color-palette-warning-70);
-<<<<<<< HEAD
         --badge-color-dark: '';
-=======
->>>>>>> 6ff2543 (add new code base)
         --badge-text-color: var(--color-palette-white);
         --border-color: var(--color-palette-warning-50);
         --active-border-color: var(--color-palette-warning-50);
@@ -110,10 +87,7 @@
         --active-color: var(--color-palette-danger-50);
         --active-text-color: var(--color-palette-danger-0);
         --badge-color: var(--color-palette-danger-70);
-<<<<<<< HEAD
         --badge-color-dark: var(--color-palette-danger-90);
-=======
->>>>>>> 6ff2543 (add new code base)
         --badge-text-color: var(--color-palette-white);
         --border-color: var(--color-palette-danger-50);
         --active-border-color: var(--color-palette-danger-50);
@@ -127,10 +101,7 @@
         --active-color: var(--color-palette-danger-70);
         --active-text-color: var(--color-palette-danger-0);
         --badge-color: var(--color-palette-danger-90);
-<<<<<<< HEAD
         --badge-color-dark: var(--color-palette-danger-90);
-=======
->>>>>>> 6ff2543 (add new code base)
         --badge-text-color: var(--color-palette-white);
         --border-color: var(--color-palette-danger-70);
         --active-border-color: var(--color-palette-danger-70);
@@ -145,26 +116,16 @@
     background: var(--badge-color);
     color: var(--badge-text-color);
     font-size: var(--font-xs);
-<<<<<<< HEAD
     font-weight: 700;
     text-shadow: none;
-=======
-    font-weight: bold;
->>>>>>> 6ff2543 (add new code base)
     border-radius: 999px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-<<<<<<< HEAD
     min-width: 1.8em;
     height: 1.8em;
     line-height: 1;
     padding: 0 var(--spacing-xs);
     gap: var(--spacing-xxs);
-=======
-    width: 1.8em;
-    height: 1.8em;
-    line-height: 1;
->>>>>>> 6ff2543 (add new code base)
 }
