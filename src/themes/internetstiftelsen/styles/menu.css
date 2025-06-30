@@ -15,7 +15,9 @@
 
     &:hover,
     &:focus {
-        text-decoration: underline;
+        text-decoration: underline !important;
+        font-weight: normal;
+        color: var(--color-palette-black);
 
         &::after {
             display: none;
