@@ -88,7 +88,6 @@
     <legend>{m.nameServers()}</legend>
     <Stack vertical gap="s">
         {#each nameservers as ns, i}
-<<<<<<< HEAD
             <fieldset class="zm-domain-test__nameserver zm-fieldset" id="zmDomainTestNameserver-{ i + 1 }">
                 <legend>{m.nameserver({ index: i + 1 })}</legend>
                 <Stack bottom gap="xs" class={utils.expand}>
@@ -125,39 +124,6 @@
                     {/if}
                 </Stack>
             </fieldset>
-=======
-            <Stack bottom gap="xs" class={utils.expand}>
-                <Grid cols={2} gap="xs">
-                    <div>
-                        <Input
-                            name="nameservers[{i}][ns]"
-                            type="text"
-                            value={ns.ns}
-                            placeholder="ns1.example.com"
-                            label={i === 0 ? m.name() : undefined}
-                            onInput={(e) => updateNameserver(i, 'ns', e.currentTarget.value)}
-                            required={!!ns.ip}
-                        />
-                    </div>
-                    <div>
-                        <Input
-                            name="nameservers[{i}][ip]"
-                            value={ns.ip}
-                            type="text"
-                            placeholder=""
-                            label={i === 0 ? m.addressOptional() : undefined}
-                            onInput={(e) => updateNameserver(i, 'ip', e.currentTarget.value)}
-                        />
-                    </div>
-                </Grid>
-                {#if nameservers.length > 1}
-                    <Button variant="secondary" type="button" onClick={() => removeNameserver(i)}>
-                        <i class="bi bi-trash"></i>
-                        <span class="zm-u-visually-hidden">{m.deleteRow()}</span>
-                    </Button>
-                {/if}
-            </Stack>
->>>>>>> 6ff2543 (add new code base)
         {/each}
         <Button
             class={utils.selfLeft}
