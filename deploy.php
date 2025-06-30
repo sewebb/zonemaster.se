@@ -98,4 +98,3 @@ after('deploy:update_code', 'npm:production');
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
-
