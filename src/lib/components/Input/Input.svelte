@@ -10,7 +10,10 @@
         disabled?: boolean;
         onInput?: (event: Event & { currentTarget: EventTarget & HTMLInputElement }) => void;
         class?: string;
+<<<<<<< HEAD
         matchContentWidth?: boolean;
+=======
+>>>>>>> 6ff2543 (add new code base)
         [x: string]: unknown;
     };
 
@@ -25,6 +28,7 @@
         id,
         onInput,
         class: className = '',
+<<<<<<< HEAD
         matchContentWidth = false,
         ...restProps
     }: Props = $props();
@@ -50,10 +54,18 @@
             }, 0);
         }
     });
+=======
+        ...restProps
+    }: Props = $props();
+>>>>>>> 6ff2543 (add new code base)
 </script>
 
 {#if label}
     <label for={id} class="zm-label">{label}</label>
 {/if}
 <input name={name} id={id} bind:value={value} type={type} class={['zm-input', `zm-input--${size}`, className]} disabled={disabled}
+<<<<<<< HEAD
        placeholder={placeholder} oninput={onInput} style="min-width: {inputWidth}px" {...restProps} />
+=======
+       placeholder={placeholder} oninput={onInput} {...restProps} />
+>>>>>>> 6ff2543 (add new code base)
