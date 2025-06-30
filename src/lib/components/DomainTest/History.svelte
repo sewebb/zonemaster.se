@@ -1,7 +1,11 @@
 <script lang="ts">
+<<<<<<< HEAD
     import * as m from '@/paraglide/messages';
     import Button from '@/lib/components/Button/Button.svelte';
     import ButtonGroup from '@/lib/components/ButtonGroup/ButtonGroup.svelte';
+=======
+    import Button from '@/lib/components/Button/Button.svelte';
+>>>>>>> 6ff2543 (add new code base)
     import { getTestHistory, type ResultData, type TestHistoryItem } from '@/lib/client.js';
     import { navigate } from '@/lib/router.svelte';
 
@@ -11,6 +15,7 @@
 
     const { data }: Props = $props();
     let history: TestHistoryItem[] = $state([]);
+<<<<<<< HEAD
     let filteredHistory: TestHistoryItem[] = $state([]);
     let page: number = $state(1);
     let filter: string = $state('all');
@@ -20,6 +25,9 @@
         { key: 'delegated', value: m.delegated() },
         { key: 'undelegated', value: m.undelegated() }
     ]);
+=======
+    let page: number = $state(1);
+>>>>>>> 6ff2543 (add new code base)
 
     function onClick() {
         const historyDialog = document.getElementById('historyDialog') as HTMLDialogElement;
@@ -27,11 +35,15 @@
         getTestHistory({ domain: data.params.domain })
             .then((data) => {
                 history = data;
+<<<<<<< HEAD
                 applyFilter();
+=======
+>>>>>>> 6ff2543 (add new code base)
                 historyDialog.showModal();
             });
     }
 
+<<<<<<< HEAD
     function applyFilter() {
         if (filter === 'all') {
             filteredHistory = history;
@@ -48,6 +60,8 @@
         applyFilter();
     }
 
+=======
+>>>>>>> 6ff2543 (add new code base)
     function onClickLink(e: Event) {
         e.preventDefault();
 
@@ -59,8 +73,13 @@
     }
 
     const itemsPerPage = 10;
+<<<<<<< HEAD
     const paginatedHistory = $derived(filteredHistory.slice((page - 1) * itemsPerPage, page * itemsPerPage));
     const totalPages = $derived(Math.ceil(filteredHistory.length / itemsPerPage));
+=======
+    const paginatedHistory = $derived(history.slice((page - 1) * itemsPerPage, page * itemsPerPage));
+    const totalPages = $derived(Math.ceil(history.length / itemsPerPage));
+>>>>>>> 6ff2543 (add new code base)
 
     function goToPage(newPage: number) {
         if (newPage >= 1 && newPage <= totalPages) {
@@ -71,6 +90,7 @@
 
 <Button variant="secondary" size="small" type="button" onClick={onClick} id="zmHistoryButton">
     <i class="bi bi-clock-history"></i>
+<<<<<<< HEAD
     {m.history()}
 </Button>
 <dialog id="historyDialog" class="zm-dialog">
@@ -83,6 +103,15 @@
         />
         <form method="dialog">
             <button aria-label="Close" class="zm-dialog__close">
+=======
+    History
+</Button>
+<dialog id="historyDialog" class="zm-dialog">
+    <header>
+        <h2>Test history</h2>
+        <form method="dialog">
+            <button aria-label="Close">
+>>>>>>> 6ff2543 (add new code base)
                 <i class="bi bi-x"></i>
             </button>
         </form>
@@ -92,11 +121,16 @@
             <li class="{item.overall_result}">
                 <a href={`/result/${item.id}`} onclick={onClickLink}>
                     {item.created_at}
+<<<<<<< HEAD
                 </a>
                 {#if item.undelegated}
                     <span>{m.undelegated()}</span>
                 {/if}
                 <i class="bi bi-chevron-right"></i>
+=======
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+>>>>>>> 6ff2543 (add new code base)
             </li>
         {/each}
     </ul>

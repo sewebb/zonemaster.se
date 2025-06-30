@@ -2,11 +2,19 @@
 import * as m from '@/paraglide/messages.js';
 import Result from '@theme/Result.astro';
 import Layout from '@theme/Layout.astro';
+<<<<<<< HEAD
 import config from '@/config';
 
 export function getStaticPaths() {
     return config.enabledLanguages
         .filter((lang) => lang !== config.defaultLanguage)
+=======
+import { availableLanguageTags, sourceLanguageTag } from '@/paraglide/runtime';
+
+export function getStaticPaths() {
+    return availableLanguageTags
+        .filter((lang) => lang !== sourceLanguageTag)
+>>>>>>> 6ff2543 (add new code base)
         .map((lang) => ({ params: { lang, id: 'id' } }));
 }
 ---

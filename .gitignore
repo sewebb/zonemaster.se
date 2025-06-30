@@ -59,6 +59,3 @@ node_modules/
 #Compiles assets
 public/assets/js/*
 public/assets/css/*
-
-*storybook.log
-*.zip
