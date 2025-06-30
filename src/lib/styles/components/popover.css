@@ -9,10 +9,6 @@
     right: 0;
     transform: translateY(var(--spacing-xs));
     padding: var(--spacing-s);
-<<<<<<< HEAD
-=======
-    background-color: var(--color-palette-white);
->>>>>>> 6ff2543 (add new code base)
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     background-color: var(--color-palette-main-10);
@@ -43,11 +39,7 @@
         margin-left: -11px;
     }
 
-<<<<<<< HEAD
     .zm-popover__plain-btn {
-=======
-    button {
->>>>>>> 6ff2543 (add new code base)
         all: unset;
         cursor: pointer;
 

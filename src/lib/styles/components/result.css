@@ -3,13 +3,6 @@
 }
 
 .zm-result__group {
-<<<<<<< HEAD
-=======
-    h4 {
-        margin-bottom: 0;
-    }
-
->>>>>>> 6ff2543 (add new code base)
     & header + div {
         margin-top: var(--spacing-s);
     }
@@ -20,14 +13,11 @@
         > li {
             display: flex;
             gap: var(--spacing-xs);
-<<<<<<< HEAD
 
             > p {
                 word-break: normal;
                 overflow-wrap: anywhere;
             }
-=======
->>>>>>> 6ff2543 (add new code base)
         }
     }
 
@@ -36,7 +26,6 @@
     }
 }
 
-<<<<<<< HEAD
 .zm-result__group__title {
     display: flex;
     align-items: center;
@@ -45,18 +34,12 @@
     gap: var(--spacing-xs);
 }
 
-=======
->>>>>>> 6ff2543 (add new code base)
 .zm-result__group__button {
     all: unset;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: var(--spacing-s);
-<<<<<<< HEAD
-=======
-    white-space: nowrap;
->>>>>>> 6ff2543 (add new code base)
     font-size: calc(var(--font-xs) * 1.15);
     color: var(--color-palette-black);
 
@@ -79,11 +62,7 @@
 
 .zm-result__group--warning {
     .zm-result__group__button i {
-<<<<<<< HEAD
         color: var(--color-palette-warning-70);
-=======
-        color: var(--color-palette-warning-60);
->>>>>>> 6ff2543 (add new code base)
     }
 }
 
