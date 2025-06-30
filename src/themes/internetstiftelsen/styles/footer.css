@@ -73,6 +73,10 @@
     }
 }
 
+.zm-footer-program-versions {
+    padding-bottom: var(--spacing-m);
+}
+
 /* INTS Styleguide footer styles */
 
 @media all{
@@ -238,11 +242,15 @@
     .o-footer__bottom-links{background-color:#000;flex-wrap:wrap-reverse;justify-content:center;width:100%;display:flex;}
     .o-footer__about-link{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:14px;}
     .o-footer__paragraph a {
+        text-decoration: underline;
         color: var(--color-palette-jade);
-
+        border-bottom: 0;
+        border-right: 0;
         &:hover,
         &:focus {
+            border-bottom: 0;
             text-decoration: underline;
+            background-color: transparent;
         }
     }
 }
