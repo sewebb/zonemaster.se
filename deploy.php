@@ -46,7 +46,7 @@ add('writable_dirs', []);
 host('stage')
     ->setRemoteUser(getenv('DEPLOY_STAGE_USER'))
     ->setHostname(getenv('DEPLOY_STAGE_IP'))
-    ->set('branch', 'develop')
+    ->set('branch', 'feature/new-gui')
     ->set('deploy_path', '/var/www/{{application}}')
     ->set('host', 'stage');
 
@@ -81,7 +81,7 @@ task(
 task(
     'npm:production',
     function () {
-        run('cd {{release_path}} && npm run production');
+        run('cd {{release_path}} && npm run build');
     }
 );
 
