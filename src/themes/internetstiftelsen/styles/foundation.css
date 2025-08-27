@@ -1,6 +1,5 @@
 html {
     background-color: var(--color-palette-ash);
-<<<<<<< HEAD
 
     h1 {
         font-family: var(--font-bold-family);
@@ -18,18 +17,15 @@ html {
     ol {
         font-size: 1.125rem;
     }
-=======
 }
 
 h1 {
     font-family: var(--font-bold-family);
->>>>>>> be0ab16 (add new code base)
 }
 
 a {
     color: var(--color-palette-cyberspace);
 }
-<<<<<<< HEAD
 
 
 *,:before,:after{box-sizing:inherit;}
@@ -47,5 +43,3 @@ p a{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 ::selection{background-color:#ff9fb4;}
 .iis-o-mega-menu__link__icon{flex-shrink:0;width:.666667rem;height:.666667rem;margin-left:.25rem;}
 *{box-sizing:border-box;}
-=======
->>>>>>> be0ab16 (add new code base)
