@@ -81,7 +81,7 @@ task(
 task(
 	'npm:production',
 	function () {
-		run('cd {{release_path}} && npm run production');
+		run('cd {{release_path}} && npm run build');
 	}
 );
 
