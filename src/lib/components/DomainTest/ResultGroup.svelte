@@ -1,5 +1,4 @@
 <script lang="ts">
-    import type { ResultDataResult } from '@/lib/client.ts';
     import niceName from '@/lib/niceName.ts';
     import Badge from '@/lib/components/Badge/Badge.svelte';
     import type { Testcase } from '@/types.ts';
