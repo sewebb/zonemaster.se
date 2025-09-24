@@ -21,12 +21,9 @@
     } from '@/lib/export.ts';
     import Copy from '../Copy/Copy.svelte';
     import { resultIcon } from '@/lib/resultIcon.ts';
-<<<<<<< HEAD
     import * as m from '@/paraglide/messages';
     import { groupResult } from '@/lib/groupResult.ts';
     import type { ResultFilter } from '@/types.ts';
-=======
->>>>>>> 8f9e64e (merge main repository)
 
     type Props = {
         data: ResultData;
@@ -128,11 +125,8 @@
     if (shareUrl.includes('#')) {
         shareUrl = shareUrl.split('#')[0];
     }
-<<<<<<< HEAD
 
     let TLDURL = window.location.href;
-=======
->>>>>>> 8f9e64e (merge main repository)
 </script>
 
 <div class="zm-result">
@@ -197,17 +191,13 @@
                     onclick={() => {
                         showExport = !showExport;
                         showShare = false;
-<<<<<<< HEAD
                         showURL = false;
-=======
->>>>>>> 8f9e64e (merge main repository)
                     }}
                     id="zmExportButton"
                 >
                     <i class="bi bi-cloud-arrow-down"></i>
                     Export
                 </Button>
-<<<<<<< HEAD
                 <div
                     class="zm-popover__content"
                     role="dialog"
@@ -235,15 +225,6 @@
                             class="zm-popover__plain-btn"
                             onmousedown={() => exportText(data)}>TEXT</button
                         >
-=======
-                <div class="zm-popover__content" role="dialog" id="zmExportDialog"
-                     style:display={showExport ? 'block' : 'none'}>
-                    <div class="{stack.stack} {stack.middle} {stack.spaceBetween} {stack['gap--s']}">
-                        <button class="zm-popover__plain-btn" onmousedown={() => exportJson(data)}>JSON</button>
-                        <button class="zm-popover__plain-btn" onmousedown={() => exportHTML(data)}>HTML</button>
-                        <button class="zm-popover__plain-btn" onmousedown={() => exportCSV(data)}>CSV</button>
-                        <button class="zm-popover__plain-btn" onmousedown={() => exportText(data)}>TEXT</button>
->>>>>>> 8f9e64e (merge main repository)
                     </div>
                 </div>
             </div>
@@ -256,16 +237,12 @@
                     onclick={() => {
                         showShare = !showShare;
                         showExport = false;
-<<<<<<< HEAD
                         showURL = false;
-=======
->>>>>>> 8f9e64e (merge main repository)
                     }}
                 >
                     <i class="bi bi-share"></i>
                     Share
                 </Button>
-<<<<<<< HEAD
                 <div
                     class="zm-popover__content"
                     role="dialog"
@@ -285,12 +262,6 @@
                             name="url"
                             value={shareUrl}
                         />
-=======
-                <div class="zm-popover__content" role="dialog" id="copyURLDialog"
-                     style:display={showShare ? 'block' : 'none'}>
-                    <div class="{stack.stack} {stack.stretch} {stack.spaceBetween} {stack['gap--s']}">
-                        <Input matchContentWidth size="small" type="text" readonly name="url" value={shareUrl} />
->>>>>>> 8f9e64e (merge main repository)
                         <Copy value={shareUrl} />
                     </div>
                 </div>
@@ -299,11 +270,7 @@
     </Stack>
     <Stack vertical gap="m">
         <fieldset class="zm-fieldset">
-<<<<<<< HEAD
             <legend>{m.filterSeverityLevels()}</legend>
-=======
-            <legend>Filter severity levels</legend>
->>>>>>> 8f9e64e (merge main repository)
             <Stack gap="xs" middle wrap>
                 <FilterToggle
                     name="filter[all]"
@@ -372,15 +339,11 @@
                 content={aboutLevels.answer}
             ></Collapsible>
         {/if}
-<<<<<<< HEAD
         <fieldset
             class="zm-fieldset {stack.stack} {stack.wrap} {stack.bottom} {stack[
                 'gap--xs'
             ]}"
         >
-=======
-        <fieldset class="zm-fieldset {stack.stack} {stack.wrap} {stack.bottom} {stack['gap--xs']}">
->>>>>>> 8f9e64e (merge main repository)
             <div class={stack.expand}>
                 <Input
                     id="filterQuery"
