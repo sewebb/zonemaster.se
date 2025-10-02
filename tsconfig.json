@@ -6,7 +6,7 @@
         "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"],
-            "@theme/*": ["./src/themes/default/*"]
+            "@theme/*": ["./src/themes/internetstiftelsen/*"]
         },
         "resolveJsonModule": true,
         "esModuleInterop": true
