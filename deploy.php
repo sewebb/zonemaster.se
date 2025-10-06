@@ -81,7 +81,8 @@ task(
 task(
     'npm:production',
     function () {
-        run('cd {{release_path}} && npm run build');
+        runLocally('npm install && npm run build');
+        upload(__DIR__ . "/public", '{{release_path}}');
     }
 );
 
@@ -92,7 +93,7 @@ after('deploy:success', 'slack:notify:success');
 after('deploy:success', 'git:tag');
 after('deploy:failed', 'slack:notify:failure');
 
-after('deploy:update_code', 'npm:install');
+// after('deploy:update_code', 'npm:install');
 after('deploy:update_code', 'npm:production');
 
 // [Optional] if deploy fails automatically unlock.
