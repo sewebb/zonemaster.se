@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'HK Grotesk';
+    font-style: normal;
+    font-weight: normal;
+    src:
+        url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-Light.woff2') format('woff2'),
+        url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-Light.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Medium';
+    font-style: normal;
+    font-weight: normal;
+    src:
+        url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-Medium.woff2') format('woff2'),
+        url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Semibold';
+    font-style: normal;
+    font-weight: normal;
+    src:
+        url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-SemiBold.woff2') format('woff2'),
+        url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-SemiBold.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Bold';
+    font-style: normal;
+    font-weight: normal;
+    src:
+        url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-Bold.woff2') format('woff2'),
+        url('https://static.internetstiftelsen.se/internetstiftelsen/fonts/HKGrotesk-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}

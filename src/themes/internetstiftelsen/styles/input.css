@@ -1,0 +1,8 @@
+input.zm-input {
+    background-color: var(--color-palette-input-color);
+
+    &:focus {
+        box-shadow: 0 0 0 3px var(--color-palette-main-30);
+        border-color: var(--color-border-active);
+    }
+}
