@@ -1,0 +1,38 @@
+.zm-header {
+    background-color: var(--color-palette-white) !important;
+    padding-top: 0;
+    padding-bottom:  0;
+
+    @media screen and (min-width: 576px) {
+        padding-top: calc(var(--rhythm) / 2);
+        padding-bottom:  calc(var(--rhythm) / 2);
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: var(--rhythm);
+        padding-bottom: var(--rhythm);
+    }
+}
+
+.zm-header__sitename {
+    display: none;
+
+    @media screen and (min-width: 576px) {
+        display: block;
+        font-family: var(--font-heading-family);
+        font-size: var(--font-m);
+        margin-left: var(--rhythm);
+    }
+
+}
+
+.zm-header__navigation-group {
+    &[aria-hidden='false'] {
+
+        top: 48px;
+
+        @media screen and (min-width: 576px) {
+            top: 76px;
+        }
+    }
+}

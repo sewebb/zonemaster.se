@@ -1,0 +1,371 @@
+Release history for Zonemaster component Zonemaster-GUI
+
+v5.0.0 2025-12-17 (part of Zonemaster v2025.2 release)
+
+ [Release information]
+ - The GUI in this release has been completely rewritten. The changes
+   primarily focused on the underlying technologies, while the look and
+   feel remains only slightly altered due to various accessibility improvements.
+   From this version on, Zonemaster-GUI supports complete customization of the
+   GUI. You can find more information and a how-to in the documentation.
+
+ [Breaking changes]
+ - The GUI API has changed. It has no longer support for starting a
+   test directly from the URL. You will find more information in the
+   documentation on using the GUI.
+ - Configuration done in "app.config.json" for Zonemaster-GUI, which was
+   run-time configuration, needs to be migrated. Most of that configuration
+   has now become build-time configuration. See documents related to 
+   configuring the GUI.
+
+ [Features]
+ - Rewritten GUI (#511, #514, #516, #517, #519, #520, #521, #523, #526)
+
+ [Fixes]
+ - Ported and updated translation of messages and FAQ for the new GUI
+   (#502, #503, #505, #506, #507, #508, #518)
+
+
+v4.4.0 2025-03-04 (part of Zonemaster v2024.2.1 release)
+
+ [Release information]
+ - Translations have not been fully updated in this release. They will
+   be updated in an upcoming release.
+
+ [Features]
+- Adds translation to Slovenian language. The translation is not
+  complete (#482)
+
+
+v4.3.1 2024-12-09 (part of Zonemaster v2024.2 release)
+
+ [Release information]
+ - Translations have not been fully updated in this release. They will
+   be updated in an upcoming release.
+ - This version has no changes to Zonemaster-GUI but the installation
+   zip file has been built with updated dependencies to resolve
+   potential security issues.
+
+ [Features]
+ - Updates the link in the footer to the Zonemaster documentation to point to
+   document site at doc.zonemaster.net instead of Github (#484)
+
+v4.3.0 2024-07-01 (part of Zonemaster v2024.1 release)
+
+ [Release information]
+ - Translations have not been fully updated in this release. They will
+   be updated in an upcoming release.
+
+ [Features]
+ - Improves run test form (#461)
+ - Makes IDN names being displayed as both A-label and U-label (#464)
+ - Makes severity levels and module names in result page
+   optionally being translated (#463)
+
+ [Fixes]
+ - Cleans up old FAQ architecture files (#466)
+ - Updates translation documentation (#462)
+ - Makes history modal close (#465)
+ - Avoid bundling the mock interceptor in prod environment (#448)
+
+
+v4.2.0 2024-03-18 (public release version)
+
+ [Release information]
+ - Translations have not been fully updated in this release. They will
+   be updated in an upcoming fix release.
+
+ [Features]
+ - Improves GUI design (#434)
+
+ [Fixes]
+ - Updates FAQ (#443, #456, #457)
+ - Fixe handling of unspecified test module (#444)
+ - Updates French translation (#450)
+ - Updates README file (#455)
+
+
+v4.1.1 2023-09-08 (public fix version)
+
+ [Fixes]
+ - Corrects documentation links in FAQ for all languages
+   (#433)
+
+
+v4.1.0 2023-06-21 (public release version)
+
+ [Features]
+ - Gives small improvement of the run test page (#416)
+ - Makes room for optional footer logo (#408)
+
+ [Fixes]
+ - Updates translations (#418, #419, #423, #422, #420, #406,
+   #405)
+ - Removes documentation moved to the zonemaster/zonemaster
+   repository (#424)
+ - Moves HTML anchor into header and creates valid HTML
+   for FAQs (#407)
+ - Fixes and improves result page on a small screen (#413)
+ - Removes the github logo (#411)
+ - Adds missing strings to translation files (#414)
+ - Removes randomization of attributes in Angular (#400)
+ - Improves page footer (#403)
+ - Improves accessibility of the result page (#401)
+
+
+v4.0.2 2023-03-01 (public fix version)
+
+ [Fixes]
+ - Updates translations to Spanish and Norwegian (#396, #395)
+
+
+v4.0.1 2023-01-31 (public fix version)
+
+ [Fixes]
+ - Updates translations (#386, #385)
+
+
+v4.0.0 2022-12-19 (public release version)
+
+ [Status]
+ - This version of Zonemaster-GUI requires Zonemaster-Backend
+   version v10.0.0 or higher.
+
+ [Features]
+ - Improves domain test form (#364)
+ - Provides a better look and feel while browsing the results
+   of a test (#341)
+ - Forces footer to the viewport's bottom (#365)
+ - Uses a drop down menu to select between languages (#337)
+ - Updates the English FAQ (#347)
+ - Makes it possible to perform a test through the URL
+   directly (#334, #339, #335, #376)
+ - Upgrades to new version of angular and bootstrap with new
+   handling of language setting and translation (#349, #375)
+
+ [Fixes]
+ - Updates translations (#373, #370, #360, #354, #359, #361, #363)
+ - Fixes notifications behaviour (#369)
+ - Updates the license wording to unify with the other
+   repositories (#367)
+ - Adds license file to distribution zip file (#368, #366)
+ - Updates Zonemaster and DNS descriptive texts (#346)
+ - Gives better keyboard navigation (#342)
+ - Updates all FAQs (#336)
+ - Fixes FAQ links when serving from custom base (#331)
+ - Fixes the logo customization key name in documentation (#332)
+
+
+v3.6.1 2022-07-08 (public fix version)
+
+ [Status]
+ - This fix version does not change anything in the installed GUI besides
+   the version. There is no reason to update to this version from
+   previous version (v3.6.0).
+
+ [Fixes]
+ - Adds missing installation instructions for CentOS Linux 7 (#325)
+
+
+v3.6.0 2022-06-10 (public release version)
+
+ [Status]
+ - This version of Zonemaster-GUI only works with Zonemaster-Backend
+   v9.0.0 or newer due to the change in #319 and #316.
+
+ [Features]
+ - Makes pollinginterval configurable (#320, #307)
+ - Sorts messages by severity when presented (#297, #118)
+
+ [Fixes]
+ - Uses created_at instead of deprecated creation_time in result from
+   RPCAPI (#319, #316)
+ - Fixes translation (#318, #314)
+ - Makes it possible to have translated FAQ title (#313)
+ - Make pages title consistent (#310)
+ - Avoids using bootstrap for html export (#308)
+ - Prevent translation caching when the translation are updated (#285)
+ - Code clean-up (#303, #299, #275)
+ - Cleans domain names and nameserver names from trailing dots, trailing
+   spaces and leading spaces (#305, #249)
+ - Make navigation more consistent (#300, #284)
+
+
+v3.5.0 2021-12-20 (public fix release)
+
+ [Features]
+ - Adds translation to Spanish language and support for Spanish (#272)
+
+ [Fixes]
+ - Updates Danish translation (#293, #287)
+ - Updates Norwegian translation (#294, #289)
+
+
+v3.4.0 2021-12-03 (public release version)
+
+ [Features]
+ - Replaces CentOS with Rocky Linux (#280)
+ - Provides translation to error messages from RPC API (#269, #239)
+ - Adds support from information banner (#266)
+ - Adds filter for test history (#253, #251)
+ - Adds run time configuration (#267, #260, #219, #170)
+ - Adds flexible URL (#252, #250)
+ - Adds support for translated tooltips (#243, #241)
+
+ [Fixes]
+ - Updates Finnish translation (#290, #288)
+ - Updates Swedish translation (#286)
+ - Updates Danish translation (#248, #244)
+ - Improves translation handling (#265, #267, #234, #235, #229, #278)
+ - Updates version of Node.js used (#274)
+ - Fixes colors on buttons (#270)
+ - Improves on narrow device (#259)
+ - Improves user interface (#263, #115, #247, #238, #257, #236, #150, #153)
+   #237, #222, #212, #213, #227, #226, #224, #176, #216)
+ - Improves error messages (#230, #175, #177, #178)
+ - Fixes default protocol setting (#218, #217)
+ - Fixes critical count (#233)
+
+v3.3.0 2021-05-28 (public release version)
+
+ [Features]
+ - Adds Norwegian translation and language support (#174, #185)
+ - Adds Finnish translation and language support (#184)
+
+ [Fixes]
+ - Updates installation instructions (#202)
+ - Updates e2e tests (#195, #174)
+ - Cleans-up (#196)
+ - Fixes translation file (#186)
+ - Corrects GUI (#192, #149)
+ - Makes date consistent (#191, #189)
+ - Resolves logo issue in Chrome (#187, #181)
+
+
+v3.2.2 2021-02-10 (public release version)
+
+ [Features]
+ - New logotype for Zonemaster (#167)
+
+ [Fixes]
+ - Improves the TranslationGuide (#173)
+ - Updates installation instructions (#172)
+ - Corrects the GUI so that default language is selected
+   when the browser language is not supported (#169, #168)
+ - Removes unused style sheet (#166, #151)
+ - Makes i18n/*.json consistent (#161, #162)
+ - Updates French FAQ (#164, #89)
+
+
+v3.2.1 2020-11-06 (public release version)
+
+ [Fixes]
+ - Correct fragment in links to FAQ (#148, #147)
+ - Updated/improved installation instruction (#154, #152)
+ - Improved internationalization (i18n) (#121, #139)
+ - Corrected language value (#140, #138)
+
+
+v3.2.0 2020-04-30
+
+ [Features]
+ - New logotype for Zonemaster (#120)
+ - Improved testing (#84, #83)
+ - Improved translations (#81, #44, #61)
+
+ [Fixes]
+ - Language switch goes to Github instead (#114, #124)
+ - Translated untranslated phrases (#116)
+ - Added space after string (#117)
+ - update tsconfig for ivy engine (#112)
+ - Update dependencies (#111, #108, #109)
+ - Create empty dir for faqs generation (#110)
+ - Removed temporary files that should not be in git (#103, 92)
+ - Updated DNSSEC algorithms in drop-down list (#102, #95)
+ - Update of Swedish FAQ (#101)
+ - Adding numbers of algorithm and digest (#100, #94)
+ - Updated to correct brand name (#91)
+ - Updated installation instruction (#87, #126, #128, #129)
+ - Updated English FAQ (#88)
+ - Fixed domain test cannot be reset (#58, #79)
+ - Fixed pre-populated cannot be emtied (#59, #80)
+ - Fixed warnings when creating zip file (#56, #64)
+ - Fixed redirect all history call from test to result (#73, #71)
+ - Added how to disable default site in apache on debian. (#69, #74)
+ - Change "Digest" to "Delegation Signers (DS records)" (#75, #60)
+ - Update dependencies (Angular and co) (#76, #56)
+ - Translation into Danish (#72, #70)
+ - Add handler for scroll event to alert message (#49, #39, #40)
+ - Explain CORS in Readme (#63, #52)
+
+
+v3.1.0 2019-05-22 (public release version)
+
+ [Status]
+ - This a public release fully tested before release. This version
+   will be available on CPAN.
+
+ [Fixes]
+ - Updated installation instructions (#62, #53, #54, #45, #31)
+ - Fixed sending empty ns when the advanced options are not open (#47)
+ - Add Warning message for domain that not exist (#40, #42)
+ - Add a tests before fetching information about parent zone (#41)
+ - Fixed broken undelegated test (#38, #43)
+ - Fix french typos in translations (#30, #17)
+ - Fix history call (#18)
+ - Add no-cache for index.html (#22, #23)
+
+ [Features]
+ - Added documentation for contributers (#32)
+ - Add some e2e test with selenium (only works on local) (#37, #26)
+ - Expand the collapsed action buttons of the result page (#34, #33)
+ - Improve zonemaster description in FAQ (#35, #28)
+ - Remove predelegated test page and merge all form options (#36, #6)
+
+
+v3.0.1 2019-01-31 (pre-release version)
+
+ - Status
+   - This is a pre-release version not fully tested on all supported
+     environments.
+ - Fixes
+   - Corrected link in installation document to point at correct
+     git tag (correct release).
+
+
+v3.0.0 2019-01-27 (pre-release version)
+
+ - Status
+   - This is a pre-release version not fully tested on all supported
+     environments.
+ - API change
+   - As of version 3.0.0 of Zonemaster-Backend its API has changed and
+     this version of Zonemaster-GUI does not work with earlier versions
+     of Zonemaster-Backend.
+ - Features
+   - Adaption new profile model and API changes in Zonemaster-Backend
+     - Dynamically get avaiable profiles from the backend #10
+     - Changed HTML DS types from String to Int as expected in the API #12
+     - Removed validate_syntax and rename getNSips to getHostByName. #13
+     - Changed two api call #16
+ - Fixes
+   - Updated result CSS: set a cursor pointer on expandable results #7
+   - Various fixes #3
+   - All link references on Github now to zonemaster/zonemaster instead
+     of old dotse/zonemaster #4
+   - Updated of installation document #5
+   - Removed debug log for routing #11
+   - Fixed display profile name (async problem) #16
+
+
+v2.0.0 2018-06-25
+
+ - This is the first release version of this code.
+ - Old Zonemaster-GUI has been replaced by a entirely new code with
+   new architecture.
+ - New Zonemaster-GUI is in Javascript only with no Perl, and it talks
+   directly with the Zonemaster-Backend API, in the default installation
+   through a web server proxy, e.g. Apache http server.
+ - The old Zonemaster-GUI is deprecated, and can, for the time being,
+   still be found in the old repository,
+   https://github.com/dotse/zonemaster-gui

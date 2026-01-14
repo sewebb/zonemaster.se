@@ -1,0 +1,14 @@
+div.zm-alert {
+    border-radius: 0;
+
+    &.zm-alert--info {
+        --alert-bg: var(--color-palette-ocean-light);
+        --alert-border: var(--color-palette-ocean);
+        --alert-text-color: var(--color-palette-cyberspace);
+    }
+
+    a {
+        font-weight: var(--font-body-weight);
+        font-family: var(--font-heading-family);
+    }
+}

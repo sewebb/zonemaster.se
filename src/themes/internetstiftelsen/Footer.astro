@@ -1,0 +1,154 @@
+---
+import ProgramVersions from '../../lib/components/ProgramVersions/ProgramVersions.svelte';
+import Grid from '../../lib/components/Grid/Grid.svelte';
+---
+
+<footer class="zm-footer">
+    <div class="container">
+        <Grid client:load cols={2} gap="xs">
+            <div class="zm-footer-program-versions">
+                <ProgramVersions client:idle />
+                <span class="zm-footer-copyright">Copyright © AFNIC and The Swedish Internet Foundation. All Rights Reserved</span>
+            </div>
+            <div class="zm-footer-nav-container">
+                <nav>
+                    <ul class="zm-footer-nav">
+                        <li>
+                            <a href="https://github.com/zonemaster/zonemaster"><i class="bi bi-github"></i> Source code</a>
+                        </li>
+                        <li>
+                            <a href="https://doc.zonemaster.net/"><i class="bi bi-file-text-fill"></i> Documentation</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </Grid>
+    </div>
+    <div class="wrapper-fluid">
+        <div class="o-footer" id="siteFooter">
+            <div class="row">
+                <div class="grid-18 o-footer__info">
+                    <div class="row">
+                        <div class="grid-18 grid-lg-9 o-footer__info__freetext">
+                            <p class="o-footer__paragraph"><a href="https://internetstiftelsen.se/en/" target="_blank">The Swedish Internet Foundation</a> is an independent, business-driven and public-benefit organization. We work for an internet that contributes positively to people and society. We are responsible for the internet's Swedish top-level domain .se and manages the operation and administration of the top-level domain .nu. The revenue from our business finances a number of initiatives in order to enable people to use the internet in the best way, and to stimulate the sharing of knowledge and innovation with a focus on the internet.
+
+                            </p>
+                        </div>
+                        <div class="grid-18 grid-lg-9 o-footer__info__contact">
+                            <div class="row o-footer__info__contact__row-first">
+                                <div class="grid-md-9 grid-lg-18 grid-xl-9 grid-18 o-footer__info__address1">
+                                    <ul class="u-list-clean o-footer__info__contact__address">
+                                        <li class="o-footer__info__contact__address__li">Internetstiftelsen</li>
+                                        <li class="o-footer__info__contact__address__li">Hammarby Kaj 10D</li>
+                                        <li class="o-footer__info__contact__address__li">Box 92073</li>
+                                        <li class="o-footer__info__contact__address__li">120 07 Stockholm</li>
+                                    </ul>
+                                </div>
+                                <div class="grid-md-9 grid-lg-18 grid-xl-9 grid-18 o-footer__info__address2">
+                                    <ul class="u-list-clean o-footer__info__contact__address">
+                                        <li class="o-footer__info__contact__address__li">Email: <a class="o-footer__link" href="mailto:info@internetstiftelsen.se">info@internetstiftelsen.se</a></li>
+                                        <li class="o-footer__info__contact__address__li">Telephone: <a class="o-footer__link" href="tel:084523500">08-452 35 00</a></li>
+                                        <li class="o-footer__info__contact__address__li">Corporate identity number: 802405-0190</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row o-footer__info__contact__row-second">
+                                <div class="grid-19 grid-md-9 o-footer__info__ISO">
+                                    <a href="https://internetstiftelsen.se/om-oss/mer-om-oss/organisation/informationssakerhet/" class="o-footer__link o-footer__external-link" target="_blank" rel="noopener noreferrer">
+                                        <img width="54" height="67" src="https://internetstiftelsen.se/app/themes/internetstiftelsen/images/ISO_27001_2022_black_TM.svg" class="o-footer__external-logo" alt="Certifierade enligt ISO/IEC 27001:2022">
+                                        <span>Certifierade enligt ISO/IEC<br>27001:2022</span>
+                                    </a>
+                                </div>
+                                <div class="grid-19 grid-md-9 o-footer__info__CC"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="grid-18 o-footer__logotypes">
+                    <div class="row">
+                        <div class="o-footer__logotypes__item">
+                            <a href="https://svenskarnaochinternet.se" class="o-footer__logotypes__item__link">
+                                <div class="o-footer__logotypes__item__inner">
+                                    <div class="o-footer__logotypes__item__front">
+                                        <img class="o-footer__logotype" alt="Svenskarna och internet" src="https://static.internetstiftelsen.se/images/logotypes/svenskarna-och-internet.svg">
+                                    </div>
+                                    <div class="o-footer__logotypes__item__back">
+                                        <h2>The Swedes and the Internet</h2>
+                                        <span>An annual survey of the internet habits of Swedish people</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="o-footer__logotypes__item">
+                            <a href="https://internetdagarna.se" class="o-footer__logotypes__item__link">
+                                <div class="o-footer__logotypes__item__inner">
+                                    <div class="o-footer__logotypes__item__front">
+                                        <img class="o-footer__logotype" alt="Internetdagarna" src="https://static.internetstiftelsen.se/images/logotypes/internetdagarna.svg">
+                                    </div>
+                                    <div class="o-footer__logotypes__item__back">
+                                        <h2>The Internet Days</h2>
+                                        <span>Annual two-day conference organized by The Swedish Internet Foundation</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="o-footer__logotypes__item">
+                            <a href="https://goto10.se" class="o-footer__logotypes__item__link">
+                                <div class="o-footer__logotypes__item__inner">
+                                    <div class="o-footer__logotypes__item__front">
+                                        <img class="o-footer__logotype" alt="Goto10" src="https://static.internetstiftelsen.se/images/logotypes/goto-10.svg">
+                                    </div>
+                                    <div class="o-footer__logotypes__item__back">
+                                        <h2>Goto 10</h2>
+                                        <span>Goto 10 is your open space for internet related knowledge, networking and innovation</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="o-footer__logotypes__item">
+                            <a href="https://internetmuseum.se" class="o-footer__logotypes__item__link">
+                                <div class="o-footer__logotypes__item__inner">
+                                    <div class="o-footer__logotypes__item__front">
+                                        <img class="o-footer__logotype" alt="Internetmuseum" src="https://static.internetstiftelsen.se/images/logotypes/internetmuseum.svg">
+                                    </div>
+                                    <div class="o-footer__logotypes__item__back">
+                                        <h2>Internetmuseum</h2>
+                                        <span>A digital museum built, and curated by The Swedish Internet Foundation</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="o-footer__logotypes__item">
+                            <a href="https://digitalalektioner.se" class="o-footer__logotypes__item__link">
+                                <div class="o-footer__logotypes__item__inner">
+                                    <div class="o-footer__logotypes__item__front">
+                                        <img class="o-footer__logotype" alt="Digitala lektioner" src="https://static.internetstiftelsen.se/images/logotypes/digitala-lektioner.svg">
+                                    </div>
+                                    <div class="o-footer__logotypes__item__back">
+                                        <h2>Digitala lektioner</h2>
+                                        <span>An open education resourse about digital competens in schools</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="o-footer__logotypes__item">
+                            <a href="https://digitalalektioner.se" class="o-footer__logotypes__item__link">
+                                <div class="o-footer__logotypes__item__inner">
+                                    <div class="o-footer__logotypes__item__front">
+                                        <img class="o-footer__logotype" alt="Internetkunskap" src="https://static.internetstiftelsen.se/images/logotypes/internetkunskap.svg">
+                                    </div>
+                                    <div class="o-footer__logotypes__item__back">
+                                        <h2>Internetkunskap</h2>
+                                        <span>Collected knowledge that will help you become a safe and aware internet user</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
