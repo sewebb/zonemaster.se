@@ -46,7 +46,7 @@ add('writable_dirs', []);
 host('stage')
     ->setRemoteUser(getenv('DEPLOY_STAGE_USER'))
     ->setHostname(getenv('DEPLOY_STAGE_IP'))
-    ->set('branch', 'feature/new-gui')
+    ->set('branch', 'develop')
     ->set('deploy_path', '/var/www/{{application}}')
     ->set('host', 'stage');
 
