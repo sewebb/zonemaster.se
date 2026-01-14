@@ -8,6 +8,7 @@
     --color-palette-main-30: var(--color-palette-ocean-light);
     --border-radius: 0.25rem;
     --button-color: var(--color-palette-ocean-dark);
+    --button-color-hover: var(--color-palette-ocean-dark);
     --button-border-color: var(--color-palette-ocean-dark);
     --button-border-hover-color: var(--color-palette-ocean);
 
