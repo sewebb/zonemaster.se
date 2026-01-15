@@ -36,7 +36,7 @@ set('slack_success_color', '#55c7b4');
 set('slack_failure_color', '#c27fec');
 
 // Shared files/dirs between deploys
-add('shared_files', []);
+add('shared_files', ['.env']);
 add('shared_dirs', []);
 
 // Writable dirs by web server
