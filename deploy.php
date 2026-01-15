@@ -81,8 +81,8 @@ task(
 task(
     'npm:production',
     function () {
-        runLocally('npm install && npm run build');
-        upload(__DIR__ . "/public", '{{release_path}}');
+        run('cd {{release_path}} && npm install && npm run build');
+        // upload(__DIR__ . "/public", '{{release_path}}');
     }
 );
 
