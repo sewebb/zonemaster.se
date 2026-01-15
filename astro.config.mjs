@@ -16,7 +16,7 @@ export default defineConfig({
     trailingSlash: "always",
     output: process.env.NODE_ENV === 'production' ? 'static' : 'server',
 
-    outDir: './public/dist',
+    outDir: './public',
     publicDir: './static',
 
     i18n: {
