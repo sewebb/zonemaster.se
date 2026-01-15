@@ -9,5 +9,11 @@ section.zm-result__module {
         padding-top: 0;
         padding-bottom: 0;
         font-size: calc(var(--font-xs) * 1.25);
+
     }
+}
+
+h4.zm-result__group__title {
+    white-space: normal;
+    max-width: none;
 }
