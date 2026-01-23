@@ -1,6 +1,6 @@
 .zm-language-switcher__select {
     background-color: var(--color-palette-input-color);
-    padding-right: 34px; /* Space for custom select arrow */
+    padding-right: 3.5ch; /* Space for custom select arrow */
 
     &:focus {
         border-color: var(--color-border-active);
