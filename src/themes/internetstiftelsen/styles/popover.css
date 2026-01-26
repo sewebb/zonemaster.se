@@ -1,0 +1,19 @@
+.zm-popover {
+    .zm-popover__content {
+        background-color: var(--color-palette-white);
+
+        &:after {
+            border-color: rgba(237, 235, 255, 0);
+            border-bottom-color: var(--color-palette-white);
+            border-width: 10px;
+            margin-left: -10px;
+        }
+
+        &:before {
+            border-color: rgba(178, 170, 251, 0);
+            border-bottom-color: var(--color-border);
+            border-width: 11px;
+            margin-left: -11px;
+        }
+    }
+}
